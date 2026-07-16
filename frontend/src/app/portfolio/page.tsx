@@ -6,9 +6,14 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recharts'
 
 export default function Portfolio() {
-  const { data: segments, isLoading } = useQuery({
+  const { data: segments, isLoading: loadingSegments } = useQuery({
     queryKey: ['riskSegments'],
     queryFn: api.getRiskSegments
+  })
+
+  const { data: grades, isLoading: loadingGrades } = useQuery({
+    queryKey: ['riskGrades'],
+    queryFn: api.getRiskGrades
   })
 
   const COLORS = ['#3b82f6', '#8b5cf6', '#ec4899', '#f43f5e', '#f59e0b', '#10b981', '#06b6d4', '#6366f1']
@@ -29,13 +34,13 @@ export default function Portfolio() {
             <CardTitle>Grade Distribution</CardTitle>
           </CardHeader>
           <CardContent className="flex-1 mt-4">
-            {isLoading ? (
+            {loadingGrades ? (
               <div className="h-full flex items-center justify-center text-slate-500">Loading chart...</div>
             ) : (
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
                   <Pie
-                    data={segments}
+                    data={grades}
                     dataKey="loan_count"
                     nameKey="grade"
                     cx="50%"
@@ -44,7 +49,7 @@ export default function Portfolio() {
                     outerRadius={80}
                     paddingAngle={5}
                   >
-                    {segments?.map((entry: any, index: number) => (
+                    {grades?.map((entry: any, index: number) => (
                       <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                     ))}
                   </Pie>
@@ -61,7 +66,7 @@ export default function Portfolio() {
             <CardTitle>Segment Details</CardTitle>
           </CardHeader>
           <CardContent className="flex-1 overflow-auto">
-            {isLoading ? (
+            {loadingSegments ? (
               <div className="h-full flex items-center justify-center text-slate-500">Loading data...</div>
             ) : (
               <div className="rounded-md border border-slate-800">
@@ -82,7 +87,7 @@ export default function Portfolio() {
                         <td className="px-4 py-3 text-slate-300">{row.dti_band}</td>
                         <td className="px-4 py-3 text-slate-300 text-right">{row.loan_count}</td>
                         <td className="px-4 py-3 text-emerald-400 text-right">{formatCurrency(row.funded_amount)}</td>
-                        <td className="px-4 py-3 text-rose-400 text-right">{formatPercent(row.avg_default_rate)}</td>
+                        <td className="px-4 py-3 text-rose-400 text-right">{formatPercent(row.default_rate)}</td>
                       </tr>
                     ))}
                   </tbody>
