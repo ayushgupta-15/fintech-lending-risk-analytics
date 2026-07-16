@@ -36,7 +36,7 @@ export default function Risk() {
                 <BarChart data={grades} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
                   <XAxis dataKey="grade" stroke="#64748b" fontSize={12} tickLine={false} axisLine={false} />
                   <YAxis stroke="#64748b" fontSize={12} tickLine={false} axisLine={false} tickFormatter={(value) => `${(value * 100).toFixed(0)}%`} />
-                  <Tooltip cursor={{ fill: '#334155' }} contentStyle={{ backgroundColor: '#1e293b', border: 'none', borderRadius: '8px', color: '#f8fafc' }} formatter={(value: number) => [`${(value * 100).toFixed(2)}%`, 'Default Rate']} />
+                  <Tooltip cursor={{ fill: '#334155' }} contentStyle={{ backgroundColor: '#1e293b', border: 'none', borderRadius: '8px', color: '#f8fafc' }} formatter={(value: any) => [`${(Number(value) * 100).toFixed(2)}%`, 'Default Rate']} />
                   <Bar dataKey="avg_default_rate" fill="#f43f5e" radius={[4, 4, 0, 0]} />
                 </BarChart>
               </ResponsiveContainer>
@@ -56,7 +56,7 @@ export default function Risk() {
                 <LineChart data={dti} margin={{ top: 10, right: 10, left: -20, bottom: 20 }}>
                   <XAxis dataKey="dti_band" stroke="#64748b" fontSize={12} tickLine={false} axisLine={false} angle={-25} textAnchor="end" />
                   <YAxis stroke="#64748b" fontSize={12} tickLine={false} axisLine={false} tickFormatter={(value) => `${(value * 100).toFixed(0)}%`} />
-                  <Tooltip contentStyle={{ backgroundColor: '#1e293b', border: 'none', borderRadius: '8px', color: '#f8fafc' }} formatter={(value: number) => [`${(value * 100).toFixed(2)}%`, 'Default Rate']} />
+                  <Tooltip contentStyle={{ backgroundColor: '#1e293b', border: 'none', borderRadius: '8px', color: '#f8fafc' }} formatter={(value: any) => [`${(Number(value) * 100).toFixed(2)}%`, 'Default Rate']} />
                   <Line type="monotone" dataKey="avg_default_rate" stroke="#eab308" strokeWidth={3} dot={{ r: 4, fill: '#eab308' }} activeDot={{ r: 6 }} />
                 </LineChart>
               </ResponsiveContainer>
