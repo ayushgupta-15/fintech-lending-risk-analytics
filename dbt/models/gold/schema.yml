@@ -1,0 +1,31 @@
+version: 2
+
+models:
+  - name: portfolio_summary
+    description: "High-level KPI metrics for the entire loan portfolio"
+    
+  - name: risk_engine
+    description: "Aggregated risk metrics and scoring by segment"
+    columns:
+      - name: grade
+        tests:
+          - not_null
+      - name: risk_score
+        tests:
+          - not_null
+
+  - name: policy_engine
+    description: "Loan-level table pre-joined with risk segments for fast policy simulations"
+    columns:
+      - name: loan_id
+        tests:
+          - unique
+          - not_null
+
+  - name: recommendations
+    description: "Rules-based recommendations derived from risk triggers"
+    columns:
+      - name: business_impact
+        tests:
+          - accepted_values:
+              values: ['High', 'Low']

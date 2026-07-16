@@ -1,0 +1,1799 @@
+[0m14:04:20.856470 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cc67545fa90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cc67545f790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cc67545e8d0>]}
+
+
+============================== 14:04:20.863458 | 38516ced-34fd-469e-acf2-603b6f17851e ==============================
+[0m14:04:20.863458 [info ] [MainThread]: Running with dbt=1.8.3
+[0m14:04:20.864209 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/root/.dbt', 'log_path': '/usr/app/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt build', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m14:04:21.031356 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '38516ced-34fd-469e-acf2-603b6f17851e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cc673b48d90>]}
+[0m14:04:21.087113 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '38516ced-34fd-469e-acf2-603b6f17851e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cc67708d210>]}
+[0m14:04:21.087936 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m14:04:21.104453 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m14:04:21.105626 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m14:04:21.106198 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '38516ced-34fd-469e-acf2-603b6f17851e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cc673bdc890>]}
+[0m14:04:22.083519 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `tests` config has been renamed to `data_tests`. Please see
+https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+information.
+[0m14:04:22.083997 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '38516ced-34fd-469e-acf2-603b6f17851e', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cc673b3b710>]}
+[0m14:04:22.376348 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.enterprise_risk.bronze
+[0m14:04:22.388369 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '38516ced-34fd-469e-acf2-603b6f17851e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cc673052a50>]}
+[0m14:04:22.507052 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '38516ced-34fd-469e-acf2-603b6f17851e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cc676136810>]}
+[0m14:04:22.507755 [info ] [MainThread]: Found 5 models, 10 data tests, 1 source, 415 macros
+[0m14:04:22.511474 [info ] [MainThread]: 
+[0m14:04:22.512236 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m14:04:22.517116 [debug] [ThreadPool]: Acquiring new postgres connection 'list_enterprise_risk'
+[0m14:04:22.517846 [debug] [ThreadPool]: Acquiring new postgres connection 'list_enterprise_risk'
+[0m14:04:22.576566 [debug] [ThreadPool]: Using postgres connection "list_enterprise_risk"
+[0m14:04:22.576982 [debug] [ThreadPool]: Using postgres connection "list_enterprise_risk"
+[0m14:04:22.577467 [debug] [ThreadPool]: On list_enterprise_risk: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "connection_name": "list_enterprise_risk"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m14:04:22.577794 [debug] [ThreadPool]: On list_enterprise_risk: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "connection_name": "list_enterprise_risk"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m14:04:22.578108 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:04:22.578379 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:04:22.601663 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.0 seconds
+[0m14:04:22.602224 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.0 seconds
+[0m14:04:22.604497 [debug] [ThreadPool]: On list_enterprise_risk: Close
+[0m14:04:22.607026 [debug] [ThreadPool]: On list_enterprise_risk: Close
+[0m14:04:22.609466 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_enterprise_risk, now create_enterprise_risk_public_gold)
+[0m14:04:22.610391 [debug] [ThreadPool]: Creating schema "database: "enterprise_risk"
+schema: "public_gold"
+"
+[0m14:04:22.616496 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_enterprise_risk, now create_enterprise_risk_public_silver)
+[0m14:04:22.620833 [debug] [ThreadPool]: Using postgres connection "create_enterprise_risk_public_gold"
+[0m14:04:22.621684 [debug] [ThreadPool]: Creating schema "database: "enterprise_risk"
+schema: "public_silver"
+"
+[0m14:04:22.622254 [debug] [ThreadPool]: On create_enterprise_risk_public_gold: BEGIN
+[0m14:04:22.626723 [debug] [ThreadPool]: Using postgres connection "create_enterprise_risk_public_silver"
+[0m14:04:22.627463 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:04:22.628056 [debug] [ThreadPool]: On create_enterprise_risk_public_silver: BEGIN
+[0m14:04:22.629041 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:04:22.639043 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m14:04:22.639931 [debug] [ThreadPool]: Using postgres connection "create_enterprise_risk_public_gold"
+[0m14:04:22.641365 [debug] [ThreadPool]: On create_enterprise_risk_public_gold: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "connection_name": "create_enterprise_risk_public_gold"} */
+create schema if not exists "public_gold"
+[0m14:04:22.640539 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m14:04:22.642198 [debug] [ThreadPool]: Using postgres connection "create_enterprise_risk_public_silver"
+[0m14:04:22.642930 [debug] [ThreadPool]: On create_enterprise_risk_public_silver: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "connection_name": "create_enterprise_risk_public_silver"} */
+create schema if not exists "public_silver"
+[0m14:04:22.643536 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.0 seconds
+[0m14:04:22.645438 [debug] [ThreadPool]: On create_enterprise_risk_public_gold: COMMIT
+[0m14:04:22.646137 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.0 seconds
+[0m14:04:22.646713 [debug] [ThreadPool]: Using postgres connection "create_enterprise_risk_public_gold"
+[0m14:04:22.648511 [debug] [ThreadPool]: On create_enterprise_risk_public_silver: COMMIT
+[0m14:04:22.649220 [debug] [ThreadPool]: On create_enterprise_risk_public_gold: COMMIT
+[0m14:04:22.649892 [debug] [ThreadPool]: Using postgres connection "create_enterprise_risk_public_silver"
+[0m14:04:22.650727 [debug] [ThreadPool]: On create_enterprise_risk_public_silver: COMMIT
+[0m14:04:22.651456 [debug] [ThreadPool]: SQL status: COMMIT in 0.0 seconds
+[0m14:04:22.652074 [debug] [ThreadPool]: On create_enterprise_risk_public_gold: Close
+[0m14:04:22.652609 [debug] [ThreadPool]: SQL status: COMMIT in 0.0 seconds
+[0m14:04:22.653886 [debug] [ThreadPool]: On create_enterprise_risk_public_silver: Close
+[0m14:04:22.658183 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_enterprise_risk_public_silver, now list_enterprise_risk_public_gold)
+[0m14:04:22.665744 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_enterprise_risk_public_gold, now list_enterprise_risk_public_silver)
+[0m14:04:22.675762 [debug] [ThreadPool]: Using postgres connection "list_enterprise_risk_public_gold"
+[0m14:04:22.680375 [debug] [ThreadPool]: Using postgres connection "list_enterprise_risk_public_silver"
+[0m14:04:22.681162 [debug] [ThreadPool]: On list_enterprise_risk_public_gold: BEGIN
+[0m14:04:22.681980 [debug] [ThreadPool]: On list_enterprise_risk_public_silver: BEGIN
+[0m14:04:22.682958 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:04:22.683691 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:04:22.703130 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m14:04:22.704030 [debug] [ThreadPool]: Using postgres connection "list_enterprise_risk_public_gold"
+[0m14:04:22.704787 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m14:04:22.705636 [debug] [ThreadPool]: On list_enterprise_risk_public_gold: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "connection_name": "list_enterprise_risk_public_gold"} */
+select
+      'enterprise_risk' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_gold'
+    union all
+    select
+      'enterprise_risk' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_gold'
+    union all
+    select
+      'enterprise_risk' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_gold'
+  
+[0m14:04:22.706335 [debug] [ThreadPool]: Using postgres connection "list_enterprise_risk_public_silver"
+[0m14:04:22.708091 [debug] [ThreadPool]: On list_enterprise_risk_public_silver: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "connection_name": "list_enterprise_risk_public_silver"} */
+select
+      'enterprise_risk' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_silver'
+    union all
+    select
+      'enterprise_risk' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_silver'
+    union all
+    select
+      'enterprise_risk' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_silver'
+  
+[0m14:04:22.720174 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.0 seconds
+[0m14:04:22.720878 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.0 seconds
+[0m14:04:22.723657 [debug] [ThreadPool]: On list_enterprise_risk_public_gold: ROLLBACK
+[0m14:04:22.726889 [debug] [ThreadPool]: On list_enterprise_risk_public_silver: ROLLBACK
+[0m14:04:22.727998 [debug] [ThreadPool]: On list_enterprise_risk_public_silver: Close
+[0m14:04:22.728901 [debug] [ThreadPool]: On list_enterprise_risk_public_gold: Close
+[0m14:04:22.737597 [debug] [MainThread]: Using postgres connection "master"
+[0m14:04:22.738224 [debug] [MainThread]: On master: BEGIN
+[0m14:04:22.738658 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:04:22.747466 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m14:04:22.747948 [debug] [MainThread]: Using postgres connection "master"
+[0m14:04:22.748398 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m14:04:22.756021 [debug] [MainThread]: SQL status: SELECT 0 in 0.0 seconds
+[0m14:04:22.758000 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '38516ced-34fd-469e-acf2-603b6f17851e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cc671b193d0>]}
+[0m14:04:22.758823 [debug] [MainThread]: On master: ROLLBACK
+[0m14:04:22.759457 [debug] [MainThread]: Using postgres connection "master"
+[0m14:04:22.759836 [debug] [MainThread]: On master: BEGIN
+[0m14:04:22.760428 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m14:04:22.760765 [debug] [MainThread]: On master: COMMIT
+[0m14:04:22.761095 [debug] [MainThread]: Using postgres connection "master"
+[0m14:04:22.761406 [debug] [MainThread]: On master: COMMIT
+[0m14:04:22.761919 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m14:04:22.762236 [debug] [MainThread]: On master: Close
+[0m14:04:22.762707 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m14:04:22.763055 [info ] [MainThread]: 
+[0m14:04:22.774097 [debug] [Thread-1 (]: Began running node model.enterprise_risk.loans_clean
+[0m14:04:22.775057 [info ] [Thread-1 (]: 1 of 15 START sql view model public_silver.loans_clean ......................... [RUN]
+[0m14:04:22.775758 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_enterprise_risk_public_gold, now model.enterprise_risk.loans_clean)
+[0m14:04:22.776249 [debug] [Thread-1 (]: Began compiling node model.enterprise_risk.loans_clean
+[0m14:04:22.789196 [debug] [Thread-1 (]: Writing injected SQL for node "model.enterprise_risk.loans_clean"
+[0m14:04:22.790409 [debug] [Thread-1 (]: Began executing node model.enterprise_risk.loans_clean
+[0m14:04:22.849602 [debug] [Thread-1 (]: Writing runtime sql for node "model.enterprise_risk.loans_clean"
+[0m14:04:22.851040 [debug] [Thread-1 (]: Using postgres connection "model.enterprise_risk.loans_clean"
+[0m14:04:22.851627 [debug] [Thread-1 (]: On model.enterprise_risk.loans_clean: BEGIN
+[0m14:04:22.852085 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:04:22.860469 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:04:22.861064 [debug] [Thread-1 (]: Using postgres connection "model.enterprise_risk.loans_clean"
+[0m14:04:22.861582 [debug] [Thread-1 (]: On model.enterprise_risk.loans_clean: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "model.enterprise_risk.loans_clean"} */
+
+  create view "enterprise_risk"."public_silver"."loans_clean__dbt_tmp"
+    
+    
+  as (
+    
+
+WITH raw AS (
+    SELECT * FROM "enterprise_risk"."bronze"."loans_raw"
+)
+SELECT 
+    -- 1. Base Identifiers
+    CAST("Unnamed: 0" AS INTEGER) AS loan_id,
+    
+    -- 2. Borrower Demographics & Income
+    emp_title,
+    CAST(emp_length AS REAL) AS emp_length,
+    state,
+    homeownership,
+    CAST(annual_income AS REAL) AS annual_income,
+    verified_income,
+    CAST(debt_to_income AS REAL) AS debt_to_income,
+    
+    -- 3. Loan Attributes
+    loan_purpose,
+    application_type,
+    CAST(loan_amount AS INTEGER) AS loan_amount,
+    CAST(term AS INTEGER) AS term,
+    CAST(interest_rate AS REAL) AS interest_rate,
+    CAST(installment AS REAL) AS installment,
+    grade,
+    sub_grade,
+    issue_month,
+    loan_status,
+    
+    -- 4. Payment & Outcome
+    CAST(balance AS REAL) AS balance,
+    CAST(paid_total AS REAL) AS paid_total,
+    CAST(paid_principal AS REAL) AS paid_principal,
+    CAST(paid_interest AS REAL) AS paid_interest,
+    
+    -- 5. Derived Business Columns
+    ROUND(CAST(annual_income / 12 AS NUMERIC), 2) AS monthly_income,
+    
+    CASE 
+        WHEN annual_income < 50000 THEN 'Low'
+        WHEN annual_income BETWEEN 50000 AND 100000 THEN 'Medium'
+        ELSE 'High'
+    END AS income_band,
+
+    CASE 
+        WHEN debt_to_income < 20 THEN 'Low (<20%)'
+        WHEN debt_to_income BETWEEN 20 AND 35 THEN 'Medium (20-35%)'
+        ELSE 'High (>35%)'
+    END AS dti_band,
+
+    CASE 
+        WHEN loan_amount < 10000 THEN 'Small (<$10k)'
+        WHEN loan_amount BETWEEN 10000 AND 25000 THEN 'Medium ($10k-$25k)'
+        ELSE 'Large (>$25k)'
+    END AS loan_size_band,
+
+    CASE 
+        WHEN loan_status IN ('Charged Off', 'Default', 'Late (31-120 days)') THEN 1
+        ELSE 0
+    END AS default_flag,
+
+    CASE 
+        WHEN loan_status IN ('Fully Paid', 'Charged Off', 'Default', 'Late (31-120 days)') THEN 1
+        ELSE 0
+    END AS outcome_eligible
+
+FROM raw
+WHERE loan_amount IS NOT NULL
+  AND grade IS NOT NULL
+  AND annual_income > 0
+  AND debt_to_income >= 0
+  );
+[0m14:04:22.872514 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m14:04:22.886450 [debug] [Thread-1 (]: Using postgres connection "model.enterprise_risk.loans_clean"
+[0m14:04:22.887437 [debug] [Thread-1 (]: On model.enterprise_risk.loans_clean: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "model.enterprise_risk.loans_clean"} */
+alter table "enterprise_risk"."public_silver"."loans_clean__dbt_tmp" rename to "loans_clean"
+[0m14:04:22.890079 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m14:04:22.917287 [debug] [Thread-1 (]: On model.enterprise_risk.loans_clean: COMMIT
+[0m14:04:22.917768 [debug] [Thread-1 (]: Using postgres connection "model.enterprise_risk.loans_clean"
+[0m14:04:22.918305 [debug] [Thread-1 (]: On model.enterprise_risk.loans_clean: COMMIT
+[0m14:04:22.919812 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m14:04:22.938884 [debug] [Thread-1 (]: Applying DROP to: "enterprise_risk"."public_silver"."loans_clean__dbt_backup"
+[0m14:04:22.950700 [debug] [Thread-1 (]: Using postgres connection "model.enterprise_risk.loans_clean"
+[0m14:04:22.951463 [debug] [Thread-1 (]: On model.enterprise_risk.loans_clean: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "model.enterprise_risk.loans_clean"} */
+drop view if exists "enterprise_risk"."public_silver"."loans_clean__dbt_backup" cascade
+[0m14:04:22.953120 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m14:04:22.957415 [debug] [Thread-1 (]: On model.enterprise_risk.loans_clean: Close
+[0m14:04:22.960619 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '38516ced-34fd-469e-acf2-603b6f17851e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cc67197f150>]}
+[0m14:04:22.962118 [info ] [Thread-1 (]: 1 of 15 OK created sql view model public_silver.loans_clean .................... [[32mCREATE VIEW[0m in 0.18s]
+[0m14:04:22.963701 [debug] [Thread-1 (]: Finished running node model.enterprise_risk.loans_clean
+[0m14:04:22.966247 [debug] [Thread-3 (]: Began running node test.enterprise_risk.accepted_values_loans_clean_grade__A__B__C__D__E__F__G.75fda6ddfb
+[0m14:04:22.967259 [debug] [Thread-4 (]: Began running node test.enterprise_risk.not_null_loans_clean_loan_amount.0f4b215dec
+[0m14:04:22.968003 [debug] [Thread-2 (]: Began running node test.enterprise_risk.not_null_loans_clean_loan_id.a629e9a5c0
+[0m14:04:22.968789 [debug] [Thread-1 (]: Began running node test.enterprise_risk.not_null_loans_clean_loan_status.30565476c8
+[0m14:04:22.969447 [info ] [Thread-3 (]: 2 of 15 START test accepted_values_loans_clean_grade__A__B__C__D__E__F__G ...... [RUN]
+[0m14:04:22.970327 [info ] [Thread-4 (]: 3 of 15 START test not_null_loans_clean_loan_amount ............................ [RUN]
+[0m14:04:22.975144 [debug] [Thread-4 (]: Acquiring new postgres connection 'test.enterprise_risk.not_null_loans_clean_loan_amount.0f4b215dec'
+[0m14:04:22.976014 [debug] [Thread-4 (]: Began compiling node test.enterprise_risk.not_null_loans_clean_loan_amount.0f4b215dec
+[0m14:04:22.971353 [info ] [Thread-2 (]: 4 of 15 START test not_null_loans_clean_loan_id ................................ [RUN]
+[0m14:04:22.982583 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_enterprise_risk_public_silver, now test.enterprise_risk.not_null_loans_clean_loan_id.a629e9a5c0)
+[0m14:04:22.973982 [debug] [Thread-3 (]: Acquiring new postgres connection 'test.enterprise_risk.accepted_values_loans_clean_grade__A__B__C__D__E__F__G.75fda6ddfb'
+[0m14:04:22.983547 [debug] [Thread-2 (]: Began compiling node test.enterprise_risk.not_null_loans_clean_loan_id.a629e9a5c0
+[0m14:04:22.972590 [info ] [Thread-1 (]: 5 of 15 START test not_null_loans_clean_loan_status ............................ [RUN]
+[0m14:04:22.996009 [debug] [Thread-4 (]: Writing injected SQL for node "test.enterprise_risk.not_null_loans_clean_loan_amount.0f4b215dec"
+[0m14:04:22.996435 [debug] [Thread-3 (]: Began compiling node test.enterprise_risk.accepted_values_loans_clean_grade__A__B__C__D__E__F__G.75fda6ddfb
+[0m14:04:23.002480 [debug] [Thread-2 (]: Writing injected SQL for node "test.enterprise_risk.not_null_loans_clean_loan_id.a629e9a5c0"
+[0m14:04:23.003215 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.enterprise_risk.loans_clean, now test.enterprise_risk.not_null_loans_clean_loan_status.30565476c8)
+[0m14:04:23.010612 [debug] [Thread-3 (]: Writing injected SQL for node "test.enterprise_risk.accepted_values_loans_clean_grade__A__B__C__D__E__F__G.75fda6ddfb"
+[0m14:04:23.011458 [debug] [Thread-4 (]: Began executing node test.enterprise_risk.not_null_loans_clean_loan_amount.0f4b215dec
+[0m14:04:23.012087 [debug] [Thread-1 (]: Began compiling node test.enterprise_risk.not_null_loans_clean_loan_status.30565476c8
+[0m14:04:23.012704 [debug] [Thread-2 (]: Began executing node test.enterprise_risk.not_null_loans_clean_loan_id.a629e9a5c0
+[0m14:04:23.030192 [debug] [Thread-1 (]: Writing injected SQL for node "test.enterprise_risk.not_null_loans_clean_loan_status.30565476c8"
+[0m14:04:23.036709 [debug] [Thread-4 (]: Writing runtime sql for node "test.enterprise_risk.not_null_loans_clean_loan_amount.0f4b215dec"
+[0m14:04:23.037200 [debug] [Thread-3 (]: Began executing node test.enterprise_risk.accepted_values_loans_clean_grade__A__B__C__D__E__F__G.75fda6ddfb
+[0m14:04:23.039531 [debug] [Thread-2 (]: Writing runtime sql for node "test.enterprise_risk.not_null_loans_clean_loan_id.a629e9a5c0"
+[0m14:04:23.040621 [debug] [Thread-4 (]: Using postgres connection "test.enterprise_risk.not_null_loans_clean_loan_amount.0f4b215dec"
+[0m14:04:23.041181 [debug] [Thread-1 (]: Began executing node test.enterprise_risk.not_null_loans_clean_loan_status.30565476c8
+[0m14:04:23.044386 [debug] [Thread-3 (]: Writing runtime sql for node "test.enterprise_risk.accepted_values_loans_clean_grade__A__B__C__D__E__F__G.75fda6ddfb"
+[0m14:04:23.045057 [debug] [Thread-4 (]: On test.enterprise_risk.not_null_loans_clean_loan_amount.0f4b215dec: BEGIN
+[0m14:04:23.048864 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m14:04:23.048061 [debug] [Thread-2 (]: Using postgres connection "test.enterprise_risk.not_null_loans_clean_loan_id.a629e9a5c0"
+[0m14:04:23.047585 [debug] [Thread-1 (]: Writing runtime sql for node "test.enterprise_risk.not_null_loans_clean_loan_status.30565476c8"
+[0m14:04:23.049425 [debug] [Thread-3 (]: Using postgres connection "test.enterprise_risk.accepted_values_loans_clean_grade__A__B__C__D__E__F__G.75fda6ddfb"
+[0m14:04:23.050008 [debug] [Thread-2 (]: On test.enterprise_risk.not_null_loans_clean_loan_id.a629e9a5c0: BEGIN
+[0m14:04:23.050843 [debug] [Thread-3 (]: On test.enterprise_risk.accepted_values_loans_clean_grade__A__B__C__D__E__F__G.75fda6ddfb: BEGIN
+[0m14:04:23.051381 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:04:23.051908 [debug] [Thread-1 (]: Using postgres connection "test.enterprise_risk.not_null_loans_clean_loan_status.30565476c8"
+[0m14:04:23.053317 [debug] [Thread-1 (]: On test.enterprise_risk.not_null_loans_clean_loan_status.30565476c8: BEGIN
+[0m14:04:23.053947 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:04:23.052527 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m14:04:23.058614 [debug] [Thread-4 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:04:23.059565 [debug] [Thread-4 (]: Using postgres connection "test.enterprise_risk.not_null_loans_clean_loan_amount.0f4b215dec"
+[0m14:04:23.060302 [debug] [Thread-4 (]: On test.enterprise_risk.not_null_loans_clean_loan_amount.0f4b215dec: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "test.enterprise_risk.not_null_loans_clean_loan_amount.0f4b215dec"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select loan_amount
+from "enterprise_risk"."public_silver"."loans_clean"
+where loan_amount is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:04:23.066397 [debug] [Thread-2 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:04:23.067932 [debug] [Thread-2 (]: Using postgres connection "test.enterprise_risk.not_null_loans_clean_loan_id.a629e9a5c0"
+[0m14:04:23.068955 [debug] [Thread-2 (]: On test.enterprise_risk.not_null_loans_clean_loan_id.a629e9a5c0: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "test.enterprise_risk.not_null_loans_clean_loan_id.a629e9a5c0"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select loan_id
+from "enterprise_risk"."public_silver"."loans_clean"
+where loan_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:04:23.069458 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:04:23.069823 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:04:23.070183 [debug] [Thread-3 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:04:23.070819 [debug] [Thread-1 (]: Using postgres connection "test.enterprise_risk.not_null_loans_clean_loan_status.30565476c8"
+[0m14:04:23.076307 [debug] [Thread-4 (]: On test.enterprise_risk.not_null_loans_clean_loan_amount.0f4b215dec: ROLLBACK
+[0m14:04:23.077022 [debug] [Thread-3 (]: Using postgres connection "test.enterprise_risk.accepted_values_loans_clean_grade__A__B__C__D__E__F__G.75fda6ddfb"
+[0m14:04:23.077592 [debug] [Thread-1 (]: On test.enterprise_risk.not_null_loans_clean_loan_status.30565476c8: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "test.enterprise_risk.not_null_loans_clean_loan_status.30565476c8"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select loan_status
+from "enterprise_risk"."public_silver"."loans_clean"
+where loan_status is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:04:23.078352 [debug] [Thread-3 (]: On test.enterprise_risk.accepted_values_loans_clean_grade__A__B__C__D__E__F__G.75fda6ddfb: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "test.enterprise_risk.accepted_values_loans_clean_grade__A__B__C__D__E__F__G.75fda6ddfb"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        grade as value_field,
+        count(*) as n_records
+
+    from "enterprise_risk"."public_silver"."loans_clean"
+    group by grade
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'A','B','C','D','E','F','G'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m14:04:23.078826 [debug] [Thread-4 (]: On test.enterprise_risk.not_null_loans_clean_loan_amount.0f4b215dec: Close
+[0m14:04:23.079243 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:04:23.083799 [debug] [Thread-2 (]: On test.enterprise_risk.not_null_loans_clean_loan_id.a629e9a5c0: ROLLBACK
+[0m14:04:23.080373 [info ] [Thread-4 (]: 3 of 15 PASS not_null_loans_clean_loan_amount .................................. [[32mPASS[0m in 0.11s]
+[0m14:04:23.085424 [debug] [Thread-4 (]: Finished running node test.enterprise_risk.not_null_loans_clean_loan_amount.0f4b215dec
+[0m14:04:23.086228 [debug] [Thread-4 (]: Began running node test.enterprise_risk.unique_loans_clean_loan_id.4004fea9dd
+[0m14:04:23.086796 [info ] [Thread-4 (]: 6 of 15 START test unique_loans_clean_loan_id .................................. [RUN]
+[0m14:04:23.088818 [debug] [Thread-2 (]: On test.enterprise_risk.not_null_loans_clean_loan_id.a629e9a5c0: Close
+[0m14:04:23.091362 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:04:23.092623 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.enterprise_risk.not_null_loans_clean_loan_amount.0f4b215dec, now test.enterprise_risk.unique_loans_clean_loan_id.4004fea9dd)
+[0m14:04:23.099210 [debug] [Thread-4 (]: Began compiling node test.enterprise_risk.unique_loans_clean_loan_id.4004fea9dd
+[0m14:04:23.094141 [info ] [Thread-2 (]: 4 of 15 PASS not_null_loans_clean_loan_id ...................................... [[32mPASS[0m in 0.11s]
+[0m14:04:23.098450 [debug] [Thread-1 (]: On test.enterprise_risk.not_null_loans_clean_loan_status.30565476c8: ROLLBACK
+[0m14:04:23.093052 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:04:23.108899 [debug] [Thread-4 (]: Writing injected SQL for node "test.enterprise_risk.unique_loans_clean_loan_id.4004fea9dd"
+[0m14:04:23.109694 [debug] [Thread-2 (]: Finished running node test.enterprise_risk.not_null_loans_clean_loan_id.a629e9a5c0
+[0m14:04:23.111548 [debug] [Thread-3 (]: On test.enterprise_risk.accepted_values_loans_clean_grade__A__B__C__D__E__F__G.75fda6ddfb: ROLLBACK
+[0m14:04:23.111933 [debug] [Thread-1 (]: On test.enterprise_risk.not_null_loans_clean_loan_status.30565476c8: Close
+[0m14:04:23.113439 [info ] [Thread-1 (]: 5 of 15 PASS not_null_loans_clean_loan_status .................................. [[32mPASS[0m in 0.11s]
+[0m14:04:23.114177 [debug] [Thread-1 (]: Finished running node test.enterprise_risk.not_null_loans_clean_loan_status.30565476c8
+[0m14:04:23.112584 [debug] [Thread-4 (]: Began executing node test.enterprise_risk.unique_loans_clean_loan_id.4004fea9dd
+[0m14:04:23.120146 [debug] [Thread-3 (]: On test.enterprise_risk.accepted_values_loans_clean_grade__A__B__C__D__E__F__G.75fda6ddfb: Close
+[0m14:04:23.120955 [debug] [Thread-4 (]: Writing runtime sql for node "test.enterprise_risk.unique_loans_clean_loan_id.4004fea9dd"
+[0m14:04:23.121750 [debug] [Thread-4 (]: Using postgres connection "test.enterprise_risk.unique_loans_clean_loan_id.4004fea9dd"
+[0m14:04:23.122167 [debug] [Thread-4 (]: On test.enterprise_risk.unique_loans_clean_loan_id.4004fea9dd: BEGIN
+[0m14:04:23.122520 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m14:04:23.126574 [info ] [Thread-3 (]: 2 of 15 PASS accepted_values_loans_clean_grade__A__B__C__D__E__F__G ............ [[32mPASS[0m in 0.15s]
+[0m14:04:23.128087 [debug] [Thread-3 (]: Finished running node test.enterprise_risk.accepted_values_loans_clean_grade__A__B__C__D__E__F__G.75fda6ddfb
+[0m14:04:23.134009 [debug] [Thread-4 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:04:23.134478 [debug] [Thread-4 (]: Using postgres connection "test.enterprise_risk.unique_loans_clean_loan_id.4004fea9dd"
+[0m14:04:23.134877 [debug] [Thread-4 (]: On test.enterprise_risk.unique_loans_clean_loan_id.4004fea9dd: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "test.enterprise_risk.unique_loans_clean_loan_id.4004fea9dd"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    loan_id as unique_field,
+    count(*) as n_records
+
+from "enterprise_risk"."public_silver"."loans_clean"
+where loan_id is not null
+group by loan_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m14:04:23.146632 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:04:23.148258 [debug] [Thread-4 (]: On test.enterprise_risk.unique_loans_clean_loan_id.4004fea9dd: ROLLBACK
+[0m14:04:23.148830 [debug] [Thread-4 (]: On test.enterprise_risk.unique_loans_clean_loan_id.4004fea9dd: Close
+[0m14:04:23.149415 [info ] [Thread-4 (]: 6 of 15 PASS unique_loans_clean_loan_id ........................................ [[32mPASS[0m in 0.06s]
+[0m14:04:23.150110 [debug] [Thread-4 (]: Finished running node test.enterprise_risk.unique_loans_clean_loan_id.4004fea9dd
+[0m14:04:23.151442 [debug] [Thread-2 (]: Began running node model.enterprise_risk.portfolio_summary
+[0m14:04:23.151978 [debug] [Thread-1 (]: Began running node model.enterprise_risk.risk_engine
+[0m14:04:23.152840 [info ] [Thread-2 (]: 7 of 15 START sql table model public_gold.portfolio_summary .................... [RUN]
+[0m14:04:23.153800 [info ] [Thread-1 (]: 8 of 15 START sql table model public_gold.risk_engine .......................... [RUN]
+[0m14:04:23.154564 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.enterprise_risk.not_null_loans_clean_loan_id.a629e9a5c0, now model.enterprise_risk.portfolio_summary)
+[0m14:04:23.155066 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.enterprise_risk.not_null_loans_clean_loan_status.30565476c8, now model.enterprise_risk.risk_engine)
+[0m14:04:23.155648 [debug] [Thread-2 (]: Began compiling node model.enterprise_risk.portfolio_summary
+[0m14:04:23.156378 [debug] [Thread-1 (]: Began compiling node model.enterprise_risk.risk_engine
+[0m14:04:23.160515 [debug] [Thread-2 (]: Writing injected SQL for node "model.enterprise_risk.portfolio_summary"
+[0m14:04:23.164238 [debug] [Thread-1 (]: Writing injected SQL for node "model.enterprise_risk.risk_engine"
+[0m14:04:23.165126 [debug] [Thread-1 (]: Began executing node model.enterprise_risk.risk_engine
+[0m14:04:23.165456 [debug] [Thread-2 (]: Began executing node model.enterprise_risk.portfolio_summary
+[0m14:04:23.207324 [debug] [Thread-2 (]: Writing runtime sql for node "model.enterprise_risk.portfolio_summary"
+[0m14:04:23.208235 [debug] [Thread-1 (]: Writing runtime sql for node "model.enterprise_risk.risk_engine"
+[0m14:04:23.209152 [debug] [Thread-2 (]: Using postgres connection "model.enterprise_risk.portfolio_summary"
+[0m14:04:23.209580 [debug] [Thread-2 (]: On model.enterprise_risk.portfolio_summary: BEGIN
+[0m14:04:23.210000 [debug] [Thread-1 (]: Using postgres connection "model.enterprise_risk.risk_engine"
+[0m14:04:23.210463 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:04:23.210761 [debug] [Thread-1 (]: On model.enterprise_risk.risk_engine: BEGIN
+[0m14:04:23.211391 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:04:23.218554 [debug] [Thread-2 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:04:23.218976 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:04:23.219401 [debug] [Thread-2 (]: Using postgres connection "model.enterprise_risk.portfolio_summary"
+[0m14:04:23.219761 [debug] [Thread-1 (]: Using postgres connection "model.enterprise_risk.risk_engine"
+[0m14:04:23.220154 [debug] [Thread-2 (]: On model.enterprise_risk.portfolio_summary: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "model.enterprise_risk.portfolio_summary"} */
+
+  
+    
+
+  create  table "enterprise_risk"."public_gold"."portfolio_summary__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+SELECT 
+    COUNT(*) AS total_loans,
+    SUM(loan_amount) AS total_funded_amount,
+    AVG(loan_amount) AS avg_loan_size,
+    AVG(interest_rate) AS avg_interest_rate,
+    AVG(debt_to_income) AS avg_dti,
+    
+    SUM(CASE WHEN default_flag = 1 THEN 1 ELSE 0 END) AS total_defaults,
+    SUM(CASE WHEN default_flag = 1 THEN loan_amount ELSE 0 END) AS default_exposure,
+    
+    -- Using NULLIF to avoid division by zero
+    ROUND(CAST(SUM(CASE WHEN default_flag = 1 THEN 1 ELSE 0 END) AS NUMERIC) / NULLIF(SUM(outcome_eligible), 0), 4) AS default_rate,
+    
+    -- Expected loss simplified proxy: average default exposure historically
+    SUM(CASE WHEN default_flag = 1 THEN loan_amount - paid_total ELSE 0 END) AS expected_loss
+
+FROM "enterprise_risk"."public_silver"."loans_clean"
+  );
+  
+[0m14:04:23.220603 [debug] [Thread-1 (]: On model.enterprise_risk.risk_engine: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "model.enterprise_risk.risk_engine"} */
+
+  
+    
+
+  create  table "enterprise_risk"."public_gold"."risk_engine__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+SELECT 
+    grade,
+    loan_purpose,
+    income_band,
+    dti_band,
+    
+    COUNT(*) AS loan_count,
+    SUM(loan_amount) AS funded_amount,
+    
+    SUM(CASE WHEN default_flag = 1 THEN 1 ELSE 0 END) AS defaults,
+    
+    ROUND(CAST(SUM(CASE WHEN default_flag = 1 THEN 1 ELSE 0 END) AS NUMERIC) / NULLIF(SUM(outcome_eligible), 0), 4) AS default_rate,
+    
+    SUM(CASE WHEN default_flag = 1 THEN loan_amount - paid_total ELSE 0 END) AS expected_loss,
+    
+    -- Naive risk score based on historical default rate 
+    -- (Scaled 0-100 where higher is riskier)
+    ROUND(
+        (CAST(SUM(CASE WHEN default_flag = 1 THEN 1 ELSE 0 END) AS NUMERIC) / NULLIF(SUM(outcome_eligible), 0)) * 1000
+    , 2) AS risk_score
+
+FROM "enterprise_risk"."public_silver"."loans_clean"
+GROUP BY 
+    grade,
+    loan_purpose,
+    income_band,
+    dti_band
+  );
+  
+[0m14:04:23.247640 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:04:23.252112 [debug] [Thread-2 (]: Using postgres connection "model.enterprise_risk.portfolio_summary"
+[0m14:04:23.252606 [debug] [Thread-2 (]: On model.enterprise_risk.portfolio_summary: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "model.enterprise_risk.portfolio_summary"} */
+alter table "enterprise_risk"."public_gold"."portfolio_summary__dbt_tmp" rename to "portfolio_summary"
+[0m14:04:23.253161 [debug] [Thread-1 (]: SQL status: SELECT 405 in 0.0 seconds
+[0m14:04:23.258409 [debug] [Thread-1 (]: Using postgres connection "model.enterprise_risk.risk_engine"
+[0m14:04:23.258999 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m14:04:23.259457 [debug] [Thread-1 (]: On model.enterprise_risk.risk_engine: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "model.enterprise_risk.risk_engine"} */
+alter table "enterprise_risk"."public_gold"."risk_engine__dbt_tmp" rename to "risk_engine"
+[0m14:04:23.267895 [debug] [Thread-2 (]: On model.enterprise_risk.portfolio_summary: COMMIT
+[0m14:04:23.268773 [debug] [Thread-2 (]: Using postgres connection "model.enterprise_risk.portfolio_summary"
+[0m14:04:23.269391 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m14:04:23.270044 [debug] [Thread-2 (]: On model.enterprise_risk.portfolio_summary: COMMIT
+[0m14:04:23.272391 [debug] [Thread-1 (]: On model.enterprise_risk.risk_engine: COMMIT
+[0m14:04:23.273766 [debug] [Thread-1 (]: Using postgres connection "model.enterprise_risk.risk_engine"
+[0m14:04:23.274569 [debug] [Thread-1 (]: On model.enterprise_risk.risk_engine: COMMIT
+[0m14:04:23.275209 [debug] [Thread-2 (]: SQL status: COMMIT in 0.0 seconds
+[0m14:04:23.279554 [debug] [Thread-2 (]: Applying DROP to: "enterprise_risk"."public_gold"."portfolio_summary__dbt_backup"
+[0m14:04:23.285376 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m14:04:23.285020 [debug] [Thread-2 (]: Using postgres connection "model.enterprise_risk.portfolio_summary"
+[0m14:04:23.290807 [debug] [Thread-1 (]: Applying DROP to: "enterprise_risk"."public_gold"."risk_engine__dbt_backup"
+[0m14:04:23.291874 [debug] [Thread-2 (]: On model.enterprise_risk.portfolio_summary: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "model.enterprise_risk.portfolio_summary"} */
+drop table if exists "enterprise_risk"."public_gold"."portfolio_summary__dbt_backup" cascade
+[0m14:04:23.293452 [debug] [Thread-1 (]: Using postgres connection "model.enterprise_risk.risk_engine"
+[0m14:04:23.294447 [debug] [Thread-1 (]: On model.enterprise_risk.risk_engine: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "model.enterprise_risk.risk_engine"} */
+drop table if exists "enterprise_risk"."public_gold"."risk_engine__dbt_backup" cascade
+[0m14:04:23.295419 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m14:04:23.298559 [debug] [Thread-2 (]: On model.enterprise_risk.portfolio_summary: Close
+[0m14:04:23.300364 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '38516ced-34fd-469e-acf2-603b6f17851e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cc67548ced0>]}
+[0m14:04:23.299216 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m14:04:23.301517 [info ] [Thread-2 (]: 7 of 15 OK created sql table model public_gold.portfolio_summary ............... [[32mSELECT 1[0m in 0.15s]
+[0m14:04:23.306250 [debug] [Thread-2 (]: Finished running node model.enterprise_risk.portfolio_summary
+[0m14:04:23.304546 [debug] [Thread-1 (]: On model.enterprise_risk.risk_engine: Close
+[0m14:04:23.310733 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '38516ced-34fd-469e-acf2-603b6f17851e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cc671b0dd50>]}
+[0m14:04:23.314334 [info ] [Thread-1 (]: 8 of 15 OK created sql table model public_gold.risk_engine ..................... [[32mSELECT 405[0m in 0.16s]
+[0m14:04:23.316761 [debug] [Thread-1 (]: Finished running node model.enterprise_risk.risk_engine
+[0m14:04:23.319562 [debug] [Thread-4 (]: Began running node test.enterprise_risk.not_null_risk_engine_grade.2913e861f7
+[0m14:04:23.320919 [debug] [Thread-3 (]: Began running node test.enterprise_risk.not_null_risk_engine_risk_score.fbe488243b
+[0m14:04:23.322669 [info ] [Thread-4 (]: 9 of 15 START test not_null_risk_engine_grade .................................. [RUN]
+[0m14:04:23.325917 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.enterprise_risk.unique_loans_clean_loan_id.4004fea9dd, now test.enterprise_risk.not_null_risk_engine_grade.2913e861f7)
+[0m14:04:23.323944 [info ] [Thread-3 (]: 10 of 15 START test not_null_risk_engine_risk_score ............................ [RUN]
+[0m14:04:23.327692 [debug] [Thread-4 (]: Began compiling node test.enterprise_risk.not_null_risk_engine_grade.2913e861f7
+[0m14:04:23.329090 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.enterprise_risk.accepted_values_loans_clean_grade__A__B__C__D__E__F__G.75fda6ddfb, now test.enterprise_risk.not_null_risk_engine_risk_score.fbe488243b)
+[0m14:04:23.339346 [debug] [Thread-4 (]: Writing injected SQL for node "test.enterprise_risk.not_null_risk_engine_grade.2913e861f7"
+[0m14:04:23.340448 [debug] [Thread-3 (]: Began compiling node test.enterprise_risk.not_null_risk_engine_risk_score.fbe488243b
+[0m14:04:23.350762 [debug] [Thread-3 (]: Writing injected SQL for node "test.enterprise_risk.not_null_risk_engine_risk_score.fbe488243b"
+[0m14:04:23.351717 [debug] [Thread-4 (]: Began executing node test.enterprise_risk.not_null_risk_engine_grade.2913e861f7
+[0m14:04:23.360194 [debug] [Thread-4 (]: Writing runtime sql for node "test.enterprise_risk.not_null_risk_engine_grade.2913e861f7"
+[0m14:04:23.360974 [debug] [Thread-3 (]: Began executing node test.enterprise_risk.not_null_risk_engine_risk_score.fbe488243b
+[0m14:04:23.365275 [debug] [Thread-3 (]: Writing runtime sql for node "test.enterprise_risk.not_null_risk_engine_risk_score.fbe488243b"
+[0m14:04:23.366279 [debug] [Thread-4 (]: Using postgres connection "test.enterprise_risk.not_null_risk_engine_grade.2913e861f7"
+[0m14:04:23.366802 [debug] [Thread-3 (]: Using postgres connection "test.enterprise_risk.not_null_risk_engine_risk_score.fbe488243b"
+[0m14:04:23.367315 [debug] [Thread-4 (]: On test.enterprise_risk.not_null_risk_engine_grade.2913e861f7: BEGIN
+[0m14:04:23.367789 [debug] [Thread-3 (]: On test.enterprise_risk.not_null_risk_engine_risk_score.fbe488243b: BEGIN
+[0m14:04:23.368908 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m14:04:23.368354 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m14:04:23.379161 [debug] [Thread-3 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:04:23.380025 [debug] [Thread-3 (]: Using postgres connection "test.enterprise_risk.not_null_risk_engine_risk_score.fbe488243b"
+[0m14:04:23.380688 [debug] [Thread-3 (]: On test.enterprise_risk.not_null_risk_engine_risk_score.fbe488243b: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "test.enterprise_risk.not_null_risk_engine_risk_score.fbe488243b"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select risk_score
+from "enterprise_risk"."public_gold"."risk_engine"
+where risk_score is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:04:23.381201 [debug] [Thread-4 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:04:23.381830 [debug] [Thread-4 (]: Using postgres connection "test.enterprise_risk.not_null_risk_engine_grade.2913e861f7"
+[0m14:04:23.382312 [debug] [Thread-4 (]: On test.enterprise_risk.not_null_risk_engine_grade.2913e861f7: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "test.enterprise_risk.not_null_risk_engine_grade.2913e861f7"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select grade
+from "enterprise_risk"."public_gold"."risk_engine"
+where grade is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:04:23.383135 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:04:23.384671 [debug] [Thread-3 (]: On test.enterprise_risk.not_null_risk_engine_risk_score.fbe488243b: ROLLBACK
+[0m14:04:23.385139 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:04:23.387500 [debug] [Thread-4 (]: On test.enterprise_risk.not_null_risk_engine_grade.2913e861f7: ROLLBACK
+[0m14:04:23.387980 [debug] [Thread-3 (]: On test.enterprise_risk.not_null_risk_engine_risk_score.fbe488243b: Close
+[0m14:04:23.389045 [error] [Thread-3 (]: 10 of 15 FAIL 248 not_null_risk_engine_risk_score .............................. [[31mFAIL 248[0m in 0.06s]
+[0m14:04:23.389949 [debug] [Thread-3 (]: Finished running node test.enterprise_risk.not_null_risk_engine_risk_score.fbe488243b
+[0m14:04:23.391590 [debug] [Thread-4 (]: On test.enterprise_risk.not_null_risk_engine_grade.2913e861f7: Close
+[0m14:04:23.392763 [info ] [Thread-4 (]: 9 of 15 PASS not_null_risk_engine_grade ........................................ [[32mPASS[0m in 0.07s]
+[0m14:04:23.394944 [debug] [Thread-4 (]: Finished running node test.enterprise_risk.not_null_risk_engine_grade.2913e861f7
+[0m14:04:23.397911 [debug] [Thread-1 (]: Began running node model.enterprise_risk.policy_engine
+[0m14:04:23.398619 [debug] [Thread-2 (]: Began running node model.enterprise_risk.recommendations
+[0m14:04:23.400440 [info ] [Thread-2 (]: 12 of 15 SKIP relation public_gold.recommendations ............................. [[33mSKIP[0m]
+[0m14:04:23.399520 [info ] [Thread-1 (]: 11 of 15 SKIP relation public_gold.policy_engine ............................... [[33mSKIP[0m]
+[0m14:04:23.401052 [debug] [Thread-2 (]: Finished running node model.enterprise_risk.recommendations
+[0m14:04:23.401618 [debug] [Thread-1 (]: Finished running node model.enterprise_risk.policy_engine
+[0m14:04:23.402488 [debug] [Thread-4 (]: Began running node test.enterprise_risk.accepted_values_recommendations_business_impact__High__Low.9d5768a9ba
+[0m14:04:23.403222 [info ] [Thread-4 (]: 13 of 15 SKIP test accepted_values_recommendations_business_impact__High__Low .. [[33mSKIP[0m]
+[0m14:04:23.403931 [debug] [Thread-4 (]: Finished running node test.enterprise_risk.accepted_values_recommendations_business_impact__High__Low.9d5768a9ba
+[0m14:04:23.405325 [debug] [Thread-2 (]: Began running node test.enterprise_risk.not_null_policy_engine_loan_id.eede6f2191
+[0m14:04:23.406405 [debug] [Thread-1 (]: Began running node test.enterprise_risk.unique_policy_engine_loan_id.2521d6c7df
+[0m14:04:23.408032 [info ] [Thread-2 (]: 14 of 15 SKIP test not_null_policy_engine_loan_id .............................. [[33mSKIP[0m]
+[0m14:04:23.409066 [info ] [Thread-1 (]: 15 of 15 SKIP test unique_policy_engine_loan_id ................................ [[33mSKIP[0m]
+[0m14:04:23.409845 [debug] [Thread-2 (]: Finished running node test.enterprise_risk.not_null_policy_engine_loan_id.eede6f2191
+[0m14:04:23.410357 [debug] [Thread-1 (]: Finished running node test.enterprise_risk.unique_policy_engine_loan_id.2521d6c7df
+[0m14:04:23.413223 [debug] [MainThread]: Using postgres connection "master"
+[0m14:04:23.413832 [debug] [MainThread]: On master: BEGIN
+[0m14:04:23.414418 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:04:23.422113 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m14:04:23.422733 [debug] [MainThread]: On master: COMMIT
+[0m14:04:23.423179 [debug] [MainThread]: Using postgres connection "master"
+[0m14:04:23.423443 [debug] [MainThread]: On master: COMMIT
+[0m14:04:23.424228 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m14:04:23.424543 [debug] [MainThread]: On master: Close
+[0m14:04:23.425020 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:04:23.425270 [debug] [MainThread]: Connection 'model.enterprise_risk.risk_engine' was properly closed.
+[0m14:04:23.425515 [debug] [MainThread]: Connection 'model.enterprise_risk.portfolio_summary' was properly closed.
+[0m14:04:23.425751 [debug] [MainThread]: Connection 'test.enterprise_risk.not_null_risk_engine_risk_score.fbe488243b' was properly closed.
+[0m14:04:23.426071 [debug] [MainThread]: Connection 'test.enterprise_risk.not_null_risk_engine_grade.2913e861f7' was properly closed.
+[0m14:04:23.426561 [info ] [MainThread]: 
+[0m14:04:23.427669 [info ] [MainThread]: Finished running 1 view model, 10 data tests, 4 table models in 0 hours 0 minutes and 0.91 seconds (0.91s).
+[0m14:04:23.432148 [debug] [MainThread]: Command end result
+[0m14:04:23.477074 [info ] [MainThread]: 
+[0m14:04:23.477894 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m14:04:23.478432 [info ] [MainThread]: 
+[0m14:04:23.479093 [error] [MainThread]: [31mFailure in test not_null_risk_engine_risk_score (models/gold/schema.yml)[0m
+[0m14:04:23.479594 [error] [MainThread]:   Got 248 results, configured to fail if != 0
+[0m14:04:23.480277 [info ] [MainThread]: 
+[0m14:04:23.480817 [info ] [MainThread]:   compiled code at target/compiled/enterprise_risk/models/gold/schema.yml/not_null_risk_engine_risk_score.sql
+[0m14:04:23.481535 [info ] [MainThread]: 
+[0m14:04:23.483074 [info ] [MainThread]: Done. PASS=9 WARN=0 ERROR=1 SKIP=5 TOTAL=15
+[0m14:04:23.484580 [debug] [MainThread]: Resource report: {"command_name": "build", "command_wall_clock_time": 2.675648, "process_user_time": 3.918793, "process_kernel_time": 0.249477, "process_mem_max_rss": "120028", "process_in_blocks": "11352", "process_out_blocks": "4184", "command_success": false}
+[0m14:04:23.485220 [debug] [MainThread]: Command `dbt build` failed at 14:04:23.485091 after 2.68 seconds
+[0m14:04:23.485608 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cc676694e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cc67579ce50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7cc67940c290>]}
+[0m14:04:23.486063 [debug] [MainThread]: Flushing usage events
+[0m14:05:18.692979 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bf6dca23150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bf6dcc2bf50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bf6dca229d0>]}
+
+
+============================== 14:05:18.700886 | 52fd2a17-3152-41b5-bbf2-0f5ed0587764 ==============================
+[0m14:05:18.700886 [info ] [MainThread]: Running with dbt=1.8.3
+[0m14:05:18.701562 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/usr/app/logs', 'version_check': 'True', 'profiles_dir': '/root/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt build', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m14:05:18.847899 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '52fd2a17-3152-41b5-bbf2-0f5ed0587764', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bf6db117c90>]}
+[0m14:05:18.902049 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '52fd2a17-3152-41b5-bbf2-0f5ed0587764', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bf6de63dad0>]}
+[0m14:05:18.902851 [info ] [MainThread]: Registered adapter: postgres=1.8.2
+[0m14:05:18.924533 [debug] [MainThread]: checksum: 30bd4080c2bc8dee5936f8f60083ffbe1c906859d0fd965607c2144031479456, vars: {}, profile: , target: , version: 1.8.3
+[0m14:05:19.062199 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m14:05:19.062910 [debug] [MainThread]: Partial parsing: updated file: enterprise_risk://models/gold/risk_engine.sql
+[0m14:05:19.284542 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `tests` config has been renamed to `data_tests`. Please see
+https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+information.
+[0m14:05:19.285081 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '52fd2a17-3152-41b5-bbf2-0f5ed0587764', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bf6db1d5390>]}
+[0m14:05:19.440201 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.enterprise_risk.bronze
+[0m14:05:19.459993 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '52fd2a17-3152-41b5-bbf2-0f5ed0587764', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bf6da753850>]}
+[0m14:05:19.576222 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '52fd2a17-3152-41b5-bbf2-0f5ed0587764', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bf6da4b24d0>]}
+[0m14:05:19.576720 [info ] [MainThread]: Found 5 models, 10 data tests, 1 source, 415 macros
+[0m14:05:19.579994 [info ] [MainThread]: 
+[0m14:05:19.580802 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m14:05:19.587244 [debug] [ThreadPool]: Acquiring new postgres connection 'list_enterprise_risk'
+[0m14:05:19.587985 [debug] [ThreadPool]: Acquiring new postgres connection 'list_enterprise_risk'
+[0m14:05:19.637175 [debug] [ThreadPool]: Using postgres connection "list_enterprise_risk"
+[0m14:05:19.637646 [debug] [ThreadPool]: Using postgres connection "list_enterprise_risk"
+[0m14:05:19.638024 [debug] [ThreadPool]: On list_enterprise_risk: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "connection_name": "list_enterprise_risk"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m14:05:19.638400 [debug] [ThreadPool]: On list_enterprise_risk: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "connection_name": "list_enterprise_risk"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m14:05:19.638694 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:05:19.638988 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:05:19.648143 [debug] [ThreadPool]: SQL status: SELECT 7 in 0.0 seconds
+[0m14:05:19.648664 [debug] [ThreadPool]: SQL status: SELECT 7 in 0.0 seconds
+[0m14:05:19.650344 [debug] [ThreadPool]: On list_enterprise_risk: Close
+[0m14:05:19.651773 [debug] [ThreadPool]: On list_enterprise_risk: Close
+[0m14:05:19.654038 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_enterprise_risk, now list_enterprise_risk_public_silver)
+[0m14:05:19.660074 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_enterprise_risk, now list_enterprise_risk_public_gold)
+[0m14:05:19.661948 [debug] [ThreadPool]: Using postgres connection "list_enterprise_risk_public_silver"
+[0m14:05:19.664418 [debug] [ThreadPool]: Using postgres connection "list_enterprise_risk_public_gold"
+[0m14:05:19.664832 [debug] [ThreadPool]: On list_enterprise_risk_public_silver: BEGIN
+[0m14:05:19.665213 [debug] [ThreadPool]: On list_enterprise_risk_public_gold: BEGIN
+[0m14:05:19.665595 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:05:19.665996 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:05:19.673790 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m14:05:19.674277 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m14:05:19.674612 [debug] [ThreadPool]: Using postgres connection "list_enterprise_risk_public_gold"
+[0m14:05:19.674965 [debug] [ThreadPool]: Using postgres connection "list_enterprise_risk_public_silver"
+[0m14:05:19.675327 [debug] [ThreadPool]: On list_enterprise_risk_public_gold: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "connection_name": "list_enterprise_risk_public_gold"} */
+select
+      'enterprise_risk' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_gold'
+    union all
+    select
+      'enterprise_risk' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_gold'
+    union all
+    select
+      'enterprise_risk' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_gold'
+  
+[0m14:05:19.675691 [debug] [ThreadPool]: On list_enterprise_risk_public_silver: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "connection_name": "list_enterprise_risk_public_silver"} */
+select
+      'enterprise_risk' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_silver'
+    union all
+    select
+      'enterprise_risk' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_silver'
+    union all
+    select
+      'enterprise_risk' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_silver'
+  
+[0m14:05:19.679449 [debug] [ThreadPool]: SQL status: SELECT 2 in 0.0 seconds
+[0m14:05:19.679964 [debug] [ThreadPool]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:05:19.681896 [debug] [ThreadPool]: On list_enterprise_risk_public_gold: ROLLBACK
+[0m14:05:19.683574 [debug] [ThreadPool]: On list_enterprise_risk_public_silver: ROLLBACK
+[0m14:05:19.684408 [debug] [ThreadPool]: On list_enterprise_risk_public_silver: Close
+[0m14:05:19.684753 [debug] [ThreadPool]: On list_enterprise_risk_public_gold: Close
+[0m14:05:19.691175 [debug] [MainThread]: Using postgres connection "master"
+[0m14:05:19.692815 [debug] [MainThread]: On master: BEGIN
+[0m14:05:19.693686 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:05:19.700870 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m14:05:19.701326 [debug] [MainThread]: Using postgres connection "master"
+[0m14:05:19.701801 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m14:05:19.706610 [debug] [MainThread]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:05:19.708445 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '52fd2a17-3152-41b5-bbf2-0f5ed0587764', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bf6db00c790>]}
+[0m14:05:19.709080 [debug] [MainThread]: On master: ROLLBACK
+[0m14:05:19.710166 [debug] [MainThread]: Using postgres connection "master"
+[0m14:05:19.710594 [debug] [MainThread]: On master: BEGIN
+[0m14:05:19.711421 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m14:05:19.711741 [debug] [MainThread]: On master: COMMIT
+[0m14:05:19.712045 [debug] [MainThread]: Using postgres connection "master"
+[0m14:05:19.712377 [debug] [MainThread]: On master: COMMIT
+[0m14:05:19.712798 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m14:05:19.713054 [debug] [MainThread]: On master: Close
+[0m14:05:19.713544 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m14:05:19.713963 [info ] [MainThread]: 
+[0m14:05:19.727453 [debug] [Thread-1 (]: Began running node model.enterprise_risk.loans_clean
+[0m14:05:19.728103 [info ] [Thread-1 (]: 1 of 15 START sql view model public_silver.loans_clean ......................... [RUN]
+[0m14:05:19.728568 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_enterprise_risk_public_gold, now model.enterprise_risk.loans_clean)
+[0m14:05:19.728980 [debug] [Thread-1 (]: Began compiling node model.enterprise_risk.loans_clean
+[0m14:05:19.809431 [debug] [Thread-1 (]: Writing injected SQL for node "model.enterprise_risk.loans_clean"
+[0m14:05:19.810251 [debug] [Thread-1 (]: Began executing node model.enterprise_risk.loans_clean
+[0m14:05:19.844632 [debug] [Thread-1 (]: Writing runtime sql for node "model.enterprise_risk.loans_clean"
+[0m14:05:19.845299 [debug] [Thread-1 (]: Using postgres connection "model.enterprise_risk.loans_clean"
+[0m14:05:19.845630 [debug] [Thread-1 (]: On model.enterprise_risk.loans_clean: BEGIN
+[0m14:05:19.845922 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:05:19.852038 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:05:19.852521 [debug] [Thread-1 (]: Using postgres connection "model.enterprise_risk.loans_clean"
+[0m14:05:19.852933 [debug] [Thread-1 (]: On model.enterprise_risk.loans_clean: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "model.enterprise_risk.loans_clean"} */
+
+  create view "enterprise_risk"."public_silver"."loans_clean__dbt_tmp"
+    
+    
+  as (
+    
+
+WITH raw AS (
+    SELECT * FROM "enterprise_risk"."bronze"."loans_raw"
+)
+SELECT 
+    -- 1. Base Identifiers
+    CAST("Unnamed: 0" AS INTEGER) AS loan_id,
+    
+    -- 2. Borrower Demographics & Income
+    emp_title,
+    CAST(emp_length AS REAL) AS emp_length,
+    state,
+    homeownership,
+    CAST(annual_income AS REAL) AS annual_income,
+    verified_income,
+    CAST(debt_to_income AS REAL) AS debt_to_income,
+    
+    -- 3. Loan Attributes
+    loan_purpose,
+    application_type,
+    CAST(loan_amount AS INTEGER) AS loan_amount,
+    CAST(term AS INTEGER) AS term,
+    CAST(interest_rate AS REAL) AS interest_rate,
+    CAST(installment AS REAL) AS installment,
+    grade,
+    sub_grade,
+    issue_month,
+    loan_status,
+    
+    -- 4. Payment & Outcome
+    CAST(balance AS REAL) AS balance,
+    CAST(paid_total AS REAL) AS paid_total,
+    CAST(paid_principal AS REAL) AS paid_principal,
+    CAST(paid_interest AS REAL) AS paid_interest,
+    
+    -- 5. Derived Business Columns
+    ROUND(CAST(annual_income / 12 AS NUMERIC), 2) AS monthly_income,
+    
+    CASE 
+        WHEN annual_income < 50000 THEN 'Low'
+        WHEN annual_income BETWEEN 50000 AND 100000 THEN 'Medium'
+        ELSE 'High'
+    END AS income_band,
+
+    CASE 
+        WHEN debt_to_income < 20 THEN 'Low (<20%)'
+        WHEN debt_to_income BETWEEN 20 AND 35 THEN 'Medium (20-35%)'
+        ELSE 'High (>35%)'
+    END AS dti_band,
+
+    CASE 
+        WHEN loan_amount < 10000 THEN 'Small (<$10k)'
+        WHEN loan_amount BETWEEN 10000 AND 25000 THEN 'Medium ($10k-$25k)'
+        ELSE 'Large (>$25k)'
+    END AS loan_size_band,
+
+    CASE 
+        WHEN loan_status IN ('Charged Off', 'Default', 'Late (31-120 days)') THEN 1
+        ELSE 0
+    END AS default_flag,
+
+    CASE 
+        WHEN loan_status IN ('Fully Paid', 'Charged Off', 'Default', 'Late (31-120 days)') THEN 1
+        ELSE 0
+    END AS outcome_eligible
+
+FROM raw
+WHERE loan_amount IS NOT NULL
+  AND grade IS NOT NULL
+  AND annual_income > 0
+  AND debt_to_income >= 0
+  );
+[0m14:05:19.857115 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m14:05:19.863882 [debug] [Thread-1 (]: Using postgres connection "model.enterprise_risk.loans_clean"
+[0m14:05:19.864255 [debug] [Thread-1 (]: On model.enterprise_risk.loans_clean: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "model.enterprise_risk.loans_clean"} */
+alter table "enterprise_risk"."public_silver"."loans_clean" rename to "loans_clean__dbt_backup"
+[0m14:05:19.865561 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m14:05:19.869019 [debug] [Thread-1 (]: Using postgres connection "model.enterprise_risk.loans_clean"
+[0m14:05:19.869370 [debug] [Thread-1 (]: On model.enterprise_risk.loans_clean: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "model.enterprise_risk.loans_clean"} */
+alter table "enterprise_risk"."public_silver"."loans_clean__dbt_tmp" rename to "loans_clean"
+[0m14:05:19.870329 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m14:05:19.887135 [debug] [Thread-1 (]: On model.enterprise_risk.loans_clean: COMMIT
+[0m14:05:19.887540 [debug] [Thread-1 (]: Using postgres connection "model.enterprise_risk.loans_clean"
+[0m14:05:19.887878 [debug] [Thread-1 (]: On model.enterprise_risk.loans_clean: COMMIT
+[0m14:05:19.889131 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m14:05:19.895655 [debug] [Thread-1 (]: Applying DROP to: "enterprise_risk"."public_silver"."loans_clean__dbt_backup"
+[0m14:05:19.900920 [debug] [Thread-1 (]: Using postgres connection "model.enterprise_risk.loans_clean"
+[0m14:05:19.901326 [debug] [Thread-1 (]: On model.enterprise_risk.loans_clean: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "model.enterprise_risk.loans_clean"} */
+drop view if exists "enterprise_risk"."public_silver"."loans_clean__dbt_backup" cascade
+[0m14:05:19.903931 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m14:05:19.906163 [debug] [Thread-1 (]: On model.enterprise_risk.loans_clean: Close
+[0m14:05:19.908042 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '52fd2a17-3152-41b5-bbf2-0f5ed0587764', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bf6db032910>]}
+[0m14:05:19.908906 [info ] [Thread-1 (]: 1 of 15 OK created sql view model public_silver.loans_clean .................... [[32mCREATE VIEW[0m in 0.18s]
+[0m14:05:19.909698 [debug] [Thread-1 (]: Finished running node model.enterprise_risk.loans_clean
+[0m14:05:19.910955 [debug] [Thread-3 (]: Began running node test.enterprise_risk.accepted_values_loans_clean_grade__A__B__C__D__E__F__G.75fda6ddfb
+[0m14:05:19.911337 [debug] [Thread-4 (]: Began running node test.enterprise_risk.not_null_loans_clean_loan_amount.0f4b215dec
+[0m14:05:19.913541 [info ] [Thread-4 (]: 3 of 15 START test not_null_loans_clean_loan_amount ............................ [RUN]
+[0m14:05:19.912386 [debug] [Thread-1 (]: Began running node test.enterprise_risk.not_null_loans_clean_loan_status.30565476c8
+[0m14:05:19.912887 [info ] [Thread-3 (]: 2 of 15 START test accepted_values_loans_clean_grade__A__B__C__D__E__F__G ...... [RUN]
+[0m14:05:19.911988 [debug] [Thread-2 (]: Began running node test.enterprise_risk.not_null_loans_clean_loan_id.a629e9a5c0
+[0m14:05:19.914322 [debug] [Thread-4 (]: Acquiring new postgres connection 'test.enterprise_risk.not_null_loans_clean_loan_amount.0f4b215dec'
+[0m14:05:19.914911 [info ] [Thread-1 (]: 5 of 15 START test not_null_loans_clean_loan_status ............................ [RUN]
+[0m14:05:19.916727 [debug] [Thread-3 (]: Acquiring new postgres connection 'test.enterprise_risk.accepted_values_loans_clean_grade__A__B__C__D__E__F__G.75fda6ddfb'
+[0m14:05:19.917474 [info ] [Thread-2 (]: 4 of 15 START test not_null_loans_clean_loan_id ................................ [RUN]
+[0m14:05:19.918212 [debug] [Thread-4 (]: Began compiling node test.enterprise_risk.not_null_loans_clean_loan_amount.0f4b215dec
+[0m14:05:19.919004 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.enterprise_risk.loans_clean, now test.enterprise_risk.not_null_loans_clean_loan_status.30565476c8)
+[0m14:05:19.919573 [debug] [Thread-3 (]: Began compiling node test.enterprise_risk.accepted_values_loans_clean_grade__A__B__C__D__E__F__G.75fda6ddfb
+[0m14:05:19.920147 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_enterprise_risk_public_silver, now test.enterprise_risk.not_null_loans_clean_loan_id.a629e9a5c0)
+[0m14:05:19.933667 [debug] [Thread-4 (]: Writing injected SQL for node "test.enterprise_risk.not_null_loans_clean_loan_amount.0f4b215dec"
+[0m14:05:19.934270 [debug] [Thread-1 (]: Began compiling node test.enterprise_risk.not_null_loans_clean_loan_status.30565476c8
+[0m14:05:19.948298 [debug] [Thread-3 (]: Writing injected SQL for node "test.enterprise_risk.accepted_values_loans_clean_grade__A__B__C__D__E__F__G.75fda6ddfb"
+[0m14:05:19.949046 [debug] [Thread-2 (]: Began compiling node test.enterprise_risk.not_null_loans_clean_loan_id.a629e9a5c0
+[0m14:05:19.959144 [debug] [Thread-1 (]: Writing injected SQL for node "test.enterprise_risk.not_null_loans_clean_loan_status.30565476c8"
+[0m14:05:19.964195 [debug] [Thread-2 (]: Writing injected SQL for node "test.enterprise_risk.not_null_loans_clean_loan_id.a629e9a5c0"
+[0m14:05:19.964766 [debug] [Thread-4 (]: Began executing node test.enterprise_risk.not_null_loans_clean_loan_amount.0f4b215dec
+[0m14:05:19.965642 [debug] [Thread-3 (]: Began executing node test.enterprise_risk.accepted_values_loans_clean_grade__A__B__C__D__E__F__G.75fda6ddfb
+[0m14:05:19.966118 [debug] [Thread-1 (]: Began executing node test.enterprise_risk.not_null_loans_clean_loan_status.30565476c8
+[0m14:05:19.981049 [debug] [Thread-4 (]: Writing runtime sql for node "test.enterprise_risk.not_null_loans_clean_loan_amount.0f4b215dec"
+[0m14:05:19.983709 [debug] [Thread-3 (]: Writing runtime sql for node "test.enterprise_risk.accepted_values_loans_clean_grade__A__B__C__D__E__F__G.75fda6ddfb"
+[0m14:05:19.986659 [debug] [Thread-1 (]: Writing runtime sql for node "test.enterprise_risk.not_null_loans_clean_loan_status.30565476c8"
+[0m14:05:19.987084 [debug] [Thread-2 (]: Began executing node test.enterprise_risk.not_null_loans_clean_loan_id.a629e9a5c0
+[0m14:05:19.988241 [debug] [Thread-3 (]: Using postgres connection "test.enterprise_risk.accepted_values_loans_clean_grade__A__B__C__D__E__F__G.75fda6ddfb"
+[0m14:05:19.988596 [debug] [Thread-4 (]: Using postgres connection "test.enterprise_risk.not_null_loans_clean_loan_amount.0f4b215dec"
+[0m14:05:19.990968 [debug] [Thread-2 (]: Writing runtime sql for node "test.enterprise_risk.not_null_loans_clean_loan_id.a629e9a5c0"
+[0m14:05:19.991550 [debug] [Thread-1 (]: Using postgres connection "test.enterprise_risk.not_null_loans_clean_loan_status.30565476c8"
+[0m14:05:19.991951 [debug] [Thread-3 (]: On test.enterprise_risk.accepted_values_loans_clean_grade__A__B__C__D__E__F__G.75fda6ddfb: BEGIN
+[0m14:05:19.992357 [debug] [Thread-4 (]: On test.enterprise_risk.not_null_loans_clean_loan_amount.0f4b215dec: BEGIN
+[0m14:05:19.992863 [debug] [Thread-1 (]: On test.enterprise_risk.not_null_loans_clean_loan_status.30565476c8: BEGIN
+[0m14:05:19.993201 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m14:05:19.993511 [debug] [Thread-2 (]: Using postgres connection "test.enterprise_risk.not_null_loans_clean_loan_id.a629e9a5c0"
+[0m14:05:19.993907 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m14:05:19.994181 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:05:19.994615 [debug] [Thread-2 (]: On test.enterprise_risk.not_null_loans_clean_loan_id.a629e9a5c0: BEGIN
+[0m14:05:19.995394 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:05:20.001494 [debug] [Thread-4 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:05:20.002089 [debug] [Thread-4 (]: Using postgres connection "test.enterprise_risk.not_null_loans_clean_loan_amount.0f4b215dec"
+[0m14:05:20.002557 [debug] [Thread-4 (]: On test.enterprise_risk.not_null_loans_clean_loan_amount.0f4b215dec: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "test.enterprise_risk.not_null_loans_clean_loan_amount.0f4b215dec"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select loan_amount
+from "enterprise_risk"."public_silver"."loans_clean"
+where loan_amount is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:05:20.003715 [debug] [Thread-2 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:05:20.005022 [debug] [Thread-2 (]: Using postgres connection "test.enterprise_risk.not_null_loans_clean_loan_id.a629e9a5c0"
+[0m14:05:20.004508 [debug] [Thread-3 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:05:20.005683 [debug] [Thread-2 (]: On test.enterprise_risk.not_null_loans_clean_loan_id.a629e9a5c0: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "test.enterprise_risk.not_null_loans_clean_loan_id.a629e9a5c0"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select loan_id
+from "enterprise_risk"."public_silver"."loans_clean"
+where loan_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:05:20.006407 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:05:20.006897 [debug] [Thread-3 (]: Using postgres connection "test.enterprise_risk.accepted_values_loans_clean_grade__A__B__C__D__E__F__G.75fda6ddfb"
+[0m14:05:20.007412 [debug] [Thread-1 (]: Using postgres connection "test.enterprise_risk.not_null_loans_clean_loan_status.30565476c8"
+[0m14:05:20.008875 [debug] [Thread-1 (]: On test.enterprise_risk.not_null_loans_clean_loan_status.30565476c8: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "test.enterprise_risk.not_null_loans_clean_loan_status.30565476c8"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select loan_status
+from "enterprise_risk"."public_silver"."loans_clean"
+where loan_status is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:05:20.008373 [debug] [Thread-3 (]: On test.enterprise_risk.accepted_values_loans_clean_grade__A__B__C__D__E__F__G.75fda6ddfb: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "test.enterprise_risk.accepted_values_loans_clean_grade__A__B__C__D__E__F__G.75fda6ddfb"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        grade as value_field,
+        count(*) as n_records
+
+    from "enterprise_risk"."public_silver"."loans_clean"
+    group by grade
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'A','B','C','D','E','F','G'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m14:05:20.010079 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:05:20.015110 [debug] [Thread-4 (]: On test.enterprise_risk.not_null_loans_clean_loan_amount.0f4b215dec: ROLLBACK
+[0m14:05:20.016097 [debug] [Thread-4 (]: On test.enterprise_risk.not_null_loans_clean_loan_amount.0f4b215dec: Close
+[0m14:05:20.016753 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:05:20.019307 [debug] [Thread-2 (]: On test.enterprise_risk.not_null_loans_clean_loan_id.a629e9a5c0: ROLLBACK
+[0m14:05:20.019912 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:05:20.020901 [info ] [Thread-4 (]: 3 of 15 PASS not_null_loans_clean_loan_amount .................................. [[32mPASS[0m in 0.11s]
+[0m14:05:20.024591 [debug] [Thread-4 (]: Finished running node test.enterprise_risk.not_null_loans_clean_loan_amount.0f4b215dec
+[0m14:05:20.025170 [debug] [Thread-4 (]: Began running node test.enterprise_risk.unique_loans_clean_loan_id.4004fea9dd
+[0m14:05:20.025593 [info ] [Thread-4 (]: 6 of 15 START test unique_loans_clean_loan_id .................................. [RUN]
+[0m14:05:20.026151 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.enterprise_risk.not_null_loans_clean_loan_amount.0f4b215dec, now test.enterprise_risk.unique_loans_clean_loan_id.4004fea9dd)
+[0m14:05:20.021476 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:05:20.023370 [debug] [Thread-1 (]: On test.enterprise_risk.not_null_loans_clean_loan_status.30565476c8: ROLLBACK
+[0m14:05:20.023802 [debug] [Thread-2 (]: On test.enterprise_risk.not_null_loans_clean_loan_id.a629e9a5c0: Close
+[0m14:05:20.029481 [info ] [Thread-2 (]: 4 of 15 PASS not_null_loans_clean_loan_id ...................................... [[32mPASS[0m in 0.11s]
+[0m14:05:20.028585 [debug] [Thread-3 (]: On test.enterprise_risk.accepted_values_loans_clean_grade__A__B__C__D__E__F__G.75fda6ddfb: ROLLBACK
+[0m14:05:20.030234 [debug] [Thread-2 (]: Finished running node test.enterprise_risk.not_null_loans_clean_loan_id.a629e9a5c0
+[0m14:05:20.026614 [debug] [Thread-4 (]: Began compiling node test.enterprise_risk.unique_loans_clean_loan_id.4004fea9dd
+[0m14:05:20.031697 [debug] [Thread-1 (]: On test.enterprise_risk.not_null_loans_clean_loan_status.30565476c8: Close
+[0m14:05:20.043184 [info ] [Thread-1 (]: 5 of 15 PASS not_null_loans_clean_loan_status .................................. [[32mPASS[0m in 0.12s]
+[0m14:05:20.042099 [debug] [Thread-4 (]: Writing injected SQL for node "test.enterprise_risk.unique_loans_clean_loan_id.4004fea9dd"
+[0m14:05:20.032730 [debug] [Thread-3 (]: On test.enterprise_risk.accepted_values_loans_clean_grade__A__B__C__D__E__F__G.75fda6ddfb: Close
+[0m14:05:20.046095 [info ] [Thread-3 (]: 2 of 15 PASS accepted_values_loans_clean_grade__A__B__C__D__E__F__G ............ [[32mPASS[0m in 0.13s]
+[0m14:05:20.044458 [debug] [Thread-1 (]: Finished running node test.enterprise_risk.not_null_loans_clean_loan_status.30565476c8
+[0m14:05:20.049157 [debug] [Thread-3 (]: Finished running node test.enterprise_risk.accepted_values_loans_clean_grade__A__B__C__D__E__F__G.75fda6ddfb
+[0m14:05:20.048069 [debug] [Thread-4 (]: Began executing node test.enterprise_risk.unique_loans_clean_loan_id.4004fea9dd
+[0m14:05:20.053662 [debug] [Thread-4 (]: Writing runtime sql for node "test.enterprise_risk.unique_loans_clean_loan_id.4004fea9dd"
+[0m14:05:20.054410 [debug] [Thread-4 (]: Using postgres connection "test.enterprise_risk.unique_loans_clean_loan_id.4004fea9dd"
+[0m14:05:20.054802 [debug] [Thread-4 (]: On test.enterprise_risk.unique_loans_clean_loan_id.4004fea9dd: BEGIN
+[0m14:05:20.055127 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m14:05:20.063170 [debug] [Thread-4 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:05:20.063599 [debug] [Thread-4 (]: Using postgres connection "test.enterprise_risk.unique_loans_clean_loan_id.4004fea9dd"
+[0m14:05:20.063969 [debug] [Thread-4 (]: On test.enterprise_risk.unique_loans_clean_loan_id.4004fea9dd: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "test.enterprise_risk.unique_loans_clean_loan_id.4004fea9dd"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    loan_id as unique_field,
+    count(*) as n_records
+
+from "enterprise_risk"."public_silver"."loans_clean"
+where loan_id is not null
+group by loan_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m14:05:20.081147 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:05:20.082868 [debug] [Thread-4 (]: On test.enterprise_risk.unique_loans_clean_loan_id.4004fea9dd: ROLLBACK
+[0m14:05:20.083706 [debug] [Thread-4 (]: On test.enterprise_risk.unique_loans_clean_loan_id.4004fea9dd: Close
+[0m14:05:20.084704 [info ] [Thread-4 (]: 6 of 15 PASS unique_loans_clean_loan_id ........................................ [[32mPASS[0m in 0.06s]
+[0m14:05:20.085654 [debug] [Thread-4 (]: Finished running node test.enterprise_risk.unique_loans_clean_loan_id.4004fea9dd
+[0m14:05:20.088542 [debug] [Thread-2 (]: Began running node model.enterprise_risk.portfolio_summary
+[0m14:05:20.091036 [debug] [Thread-1 (]: Began running node model.enterprise_risk.risk_engine
+[0m14:05:20.089996 [info ] [Thread-2 (]: 7 of 15 START sql table model public_gold.portfolio_summary .................... [RUN]
+[0m14:05:20.092838 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.enterprise_risk.not_null_loans_clean_loan_id.a629e9a5c0, now model.enterprise_risk.portfolio_summary)
+[0m14:05:20.091941 [info ] [Thread-1 (]: 8 of 15 START sql table model public_gold.risk_engine .......................... [RUN]
+[0m14:05:20.094455 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.enterprise_risk.not_null_loans_clean_loan_status.30565476c8, now model.enterprise_risk.risk_engine)
+[0m14:05:20.093451 [debug] [Thread-2 (]: Began compiling node model.enterprise_risk.portfolio_summary
+[0m14:05:20.095028 [debug] [Thread-1 (]: Began compiling node model.enterprise_risk.risk_engine
+[0m14:05:20.098654 [debug] [Thread-2 (]: Writing injected SQL for node "model.enterprise_risk.portfolio_summary"
+[0m14:05:20.102704 [debug] [Thread-1 (]: Writing injected SQL for node "model.enterprise_risk.risk_engine"
+[0m14:05:20.103848 [debug] [Thread-2 (]: Began executing node model.enterprise_risk.portfolio_summary
+[0m14:05:20.114966 [debug] [Thread-1 (]: Began executing node model.enterprise_risk.risk_engine
+[0m14:05:20.148363 [debug] [Thread-2 (]: Writing runtime sql for node "model.enterprise_risk.portfolio_summary"
+[0m14:05:20.149112 [debug] [Thread-1 (]: Writing runtime sql for node "model.enterprise_risk.risk_engine"
+[0m14:05:20.150070 [debug] [Thread-1 (]: Using postgres connection "model.enterprise_risk.risk_engine"
+[0m14:05:20.150642 [debug] [Thread-2 (]: Using postgres connection "model.enterprise_risk.portfolio_summary"
+[0m14:05:20.151256 [debug] [Thread-1 (]: On model.enterprise_risk.risk_engine: BEGIN
+[0m14:05:20.151872 [debug] [Thread-2 (]: On model.enterprise_risk.portfolio_summary: BEGIN
+[0m14:05:20.152446 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:05:20.152892 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:05:20.161423 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:05:20.162035 [debug] [Thread-2 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:05:20.162653 [debug] [Thread-1 (]: Using postgres connection "model.enterprise_risk.risk_engine"
+[0m14:05:20.163177 [debug] [Thread-2 (]: Using postgres connection "model.enterprise_risk.portfolio_summary"
+[0m14:05:20.163681 [debug] [Thread-1 (]: On model.enterprise_risk.risk_engine: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "model.enterprise_risk.risk_engine"} */
+
+  
+    
+
+  create  table "enterprise_risk"."public_gold"."risk_engine__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+SELECT 
+    grade,
+    loan_purpose,
+    income_band,
+    dti_band,
+    
+    COUNT(*) AS loan_count,
+    SUM(loan_amount) AS funded_amount,
+    
+    SUM(CASE WHEN default_flag = 1 THEN 1 ELSE 0 END) AS defaults,
+    
+    ROUND(CAST(SUM(CASE WHEN default_flag = 1 THEN 1 ELSE 0 END) AS NUMERIC) / NULLIF(SUM(outcome_eligible), 0), 4) AS default_rate,
+    
+    SUM(CASE WHEN default_flag = 1 THEN loan_amount - paid_total ELSE 0 END) AS expected_loss,
+    
+    -- Naive risk score based on historical default rate 
+    -- (Scaled 0-1000 where higher is riskier)
+    COALESCE(ROUND(
+        (CAST(SUM(CASE WHEN default_flag = 1 THEN 1 ELSE 0 END) AS NUMERIC) / NULLIF(SUM(outcome_eligible), 0)) * 1000
+    , 2), 0) AS risk_score
+
+FROM "enterprise_risk"."public_silver"."loans_clean"
+GROUP BY 
+    grade,
+    loan_purpose,
+    income_band,
+    dti_band
+  );
+  
+[0m14:05:20.164268 [debug] [Thread-2 (]: On model.enterprise_risk.portfolio_summary: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "model.enterprise_risk.portfolio_summary"} */
+
+  
+    
+
+  create  table "enterprise_risk"."public_gold"."portfolio_summary__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+SELECT 
+    COUNT(*) AS total_loans,
+    SUM(loan_amount) AS total_funded_amount,
+    AVG(loan_amount) AS avg_loan_size,
+    AVG(interest_rate) AS avg_interest_rate,
+    AVG(debt_to_income) AS avg_dti,
+    
+    SUM(CASE WHEN default_flag = 1 THEN 1 ELSE 0 END) AS total_defaults,
+    SUM(CASE WHEN default_flag = 1 THEN loan_amount ELSE 0 END) AS default_exposure,
+    
+    -- Using NULLIF to avoid division by zero
+    ROUND(CAST(SUM(CASE WHEN default_flag = 1 THEN 1 ELSE 0 END) AS NUMERIC) / NULLIF(SUM(outcome_eligible), 0), 4) AS default_rate,
+    
+    -- Expected loss simplified proxy: average default exposure historically
+    SUM(CASE WHEN default_flag = 1 THEN loan_amount - paid_total ELSE 0 END) AS expected_loss
+
+FROM "enterprise_risk"."public_silver"."loans_clean"
+  );
+  
+[0m14:05:20.198063 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:05:20.206095 [debug] [Thread-2 (]: Using postgres connection "model.enterprise_risk.portfolio_summary"
+[0m14:05:20.207017 [debug] [Thread-1 (]: SQL status: SELECT 405 in 0.0 seconds
+[0m14:05:20.207769 [debug] [Thread-2 (]: On model.enterprise_risk.portfolio_summary: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "model.enterprise_risk.portfolio_summary"} */
+alter table "enterprise_risk"."public_gold"."portfolio_summary" rename to "portfolio_summary__dbt_backup"
+[0m14:05:20.213350 [debug] [Thread-1 (]: Using postgres connection "model.enterprise_risk.risk_engine"
+[0m14:05:20.214280 [debug] [Thread-1 (]: On model.enterprise_risk.risk_engine: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "model.enterprise_risk.risk_engine"} */
+alter table "enterprise_risk"."public_gold"."risk_engine" rename to "risk_engine__dbt_backup"
+[0m14:05:20.214933 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m14:05:20.221834 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m14:05:20.223104 [debug] [Thread-2 (]: Using postgres connection "model.enterprise_risk.portfolio_summary"
+[0m14:05:20.231917 [debug] [Thread-1 (]: Using postgres connection "model.enterprise_risk.risk_engine"
+[0m14:05:20.233172 [debug] [Thread-2 (]: On model.enterprise_risk.portfolio_summary: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "model.enterprise_risk.portfolio_summary"} */
+alter table "enterprise_risk"."public_gold"."portfolio_summary__dbt_tmp" rename to "portfolio_summary"
+[0m14:05:20.235343 [debug] [Thread-1 (]: On model.enterprise_risk.risk_engine: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "model.enterprise_risk.risk_engine"} */
+alter table "enterprise_risk"."public_gold"."risk_engine__dbt_tmp" rename to "risk_engine"
+[0m14:05:20.237524 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m14:05:20.238441 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m14:05:20.248832 [debug] [Thread-2 (]: On model.enterprise_risk.portfolio_summary: COMMIT
+[0m14:05:20.252192 [debug] [Thread-1 (]: On model.enterprise_risk.risk_engine: COMMIT
+[0m14:05:20.252914 [debug] [Thread-2 (]: Using postgres connection "model.enterprise_risk.portfolio_summary"
+[0m14:05:20.253450 [debug] [Thread-1 (]: Using postgres connection "model.enterprise_risk.risk_engine"
+[0m14:05:20.253964 [debug] [Thread-2 (]: On model.enterprise_risk.portfolio_summary: COMMIT
+[0m14:05:20.254417 [debug] [Thread-1 (]: On model.enterprise_risk.risk_engine: COMMIT
+[0m14:05:20.256470 [debug] [Thread-2 (]: SQL status: COMMIT in 0.0 seconds
+[0m14:05:20.260954 [debug] [Thread-2 (]: Applying DROP to: "enterprise_risk"."public_gold"."portfolio_summary__dbt_backup"
+[0m14:05:20.261532 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m14:05:20.265690 [debug] [Thread-2 (]: Using postgres connection "model.enterprise_risk.portfolio_summary"
+[0m14:05:20.270523 [debug] [Thread-1 (]: Applying DROP to: "enterprise_risk"."public_gold"."risk_engine__dbt_backup"
+[0m14:05:20.271216 [debug] [Thread-2 (]: On model.enterprise_risk.portfolio_summary: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "model.enterprise_risk.portfolio_summary"} */
+drop table if exists "enterprise_risk"."public_gold"."portfolio_summary__dbt_backup" cascade
+[0m14:05:20.272196 [debug] [Thread-1 (]: Using postgres connection "model.enterprise_risk.risk_engine"
+[0m14:05:20.272826 [debug] [Thread-1 (]: On model.enterprise_risk.risk_engine: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "model.enterprise_risk.risk_engine"} */
+drop table if exists "enterprise_risk"."public_gold"."risk_engine__dbt_backup" cascade
+[0m14:05:20.274993 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m14:05:20.277184 [debug] [Thread-2 (]: On model.enterprise_risk.portfolio_summary: Close
+[0m14:05:20.277695 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m14:05:20.279585 [debug] [Thread-1 (]: On model.enterprise_risk.risk_engine: Close
+[0m14:05:20.280295 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '52fd2a17-3152-41b5-bbf2-0f5ed0587764', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bf6ddfab5d0>]}
+[0m14:05:20.281356 [info ] [Thread-2 (]: 7 of 15 OK created sql table model public_gold.portfolio_summary ............... [[32mSELECT 1[0m in 0.19s]
+[0m14:05:20.285519 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '52fd2a17-3152-41b5-bbf2-0f5ed0587764', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bf6dca97450>]}
+[0m14:05:20.286374 [debug] [Thread-2 (]: Finished running node model.enterprise_risk.portfolio_summary
+[0m14:05:20.287304 [info ] [Thread-1 (]: 8 of 15 OK created sql table model public_gold.risk_engine ..................... [[32mSELECT 405[0m in 0.19s]
+[0m14:05:20.288710 [debug] [Thread-1 (]: Finished running node model.enterprise_risk.risk_engine
+[0m14:05:20.289849 [debug] [Thread-4 (]: Began running node test.enterprise_risk.not_null_risk_engine_grade.2913e861f7
+[0m14:05:20.290596 [debug] [Thread-3 (]: Began running node test.enterprise_risk.not_null_risk_engine_risk_score.fbe488243b
+[0m14:05:20.291801 [info ] [Thread-4 (]: 9 of 15 START test not_null_risk_engine_grade .................................. [RUN]
+[0m14:05:20.295076 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.enterprise_risk.unique_loans_clean_loan_id.4004fea9dd, now test.enterprise_risk.not_null_risk_engine_grade.2913e861f7)
+[0m14:05:20.295715 [debug] [Thread-4 (]: Began compiling node test.enterprise_risk.not_null_risk_engine_grade.2913e861f7
+[0m14:05:20.292446 [info ] [Thread-3 (]: 10 of 15 START test not_null_risk_engine_risk_score ............................ [RUN]
+[0m14:05:20.302615 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.enterprise_risk.accepted_values_loans_clean_grade__A__B__C__D__E__F__G.75fda6ddfb, now test.enterprise_risk.not_null_risk_engine_risk_score.fbe488243b)
+[0m14:05:20.303367 [debug] [Thread-3 (]: Began compiling node test.enterprise_risk.not_null_risk_engine_risk_score.fbe488243b
+[0m14:05:20.309057 [debug] [Thread-3 (]: Writing injected SQL for node "test.enterprise_risk.not_null_risk_engine_risk_score.fbe488243b"
+[0m14:05:20.310463 [debug] [Thread-4 (]: Writing injected SQL for node "test.enterprise_risk.not_null_risk_engine_grade.2913e861f7"
+[0m14:05:20.311401 [debug] [Thread-4 (]: Began executing node test.enterprise_risk.not_null_risk_engine_grade.2913e861f7
+[0m14:05:20.311855 [debug] [Thread-3 (]: Began executing node test.enterprise_risk.not_null_risk_engine_risk_score.fbe488243b
+[0m14:05:20.315364 [debug] [Thread-4 (]: Writing runtime sql for node "test.enterprise_risk.not_null_risk_engine_grade.2913e861f7"
+[0m14:05:20.321296 [debug] [Thread-3 (]: Writing runtime sql for node "test.enterprise_risk.not_null_risk_engine_risk_score.fbe488243b"
+[0m14:05:20.322477 [debug] [Thread-4 (]: Using postgres connection "test.enterprise_risk.not_null_risk_engine_grade.2913e861f7"
+[0m14:05:20.322988 [debug] [Thread-4 (]: On test.enterprise_risk.not_null_risk_engine_grade.2913e861f7: BEGIN
+[0m14:05:20.323450 [debug] [Thread-3 (]: Using postgres connection "test.enterprise_risk.not_null_risk_engine_risk_score.fbe488243b"
+[0m14:05:20.324200 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m14:05:20.324905 [debug] [Thread-3 (]: On test.enterprise_risk.not_null_risk_engine_risk_score.fbe488243b: BEGIN
+[0m14:05:20.325655 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m14:05:20.334722 [debug] [Thread-4 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:05:20.335571 [debug] [Thread-4 (]: Using postgres connection "test.enterprise_risk.not_null_risk_engine_grade.2913e861f7"
+[0m14:05:20.336178 [debug] [Thread-3 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:05:20.336700 [debug] [Thread-4 (]: On test.enterprise_risk.not_null_risk_engine_grade.2913e861f7: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "test.enterprise_risk.not_null_risk_engine_grade.2913e861f7"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select grade
+from "enterprise_risk"."public_gold"."risk_engine"
+where grade is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:05:20.337330 [debug] [Thread-3 (]: Using postgres connection "test.enterprise_risk.not_null_risk_engine_risk_score.fbe488243b"
+[0m14:05:20.337820 [debug] [Thread-3 (]: On test.enterprise_risk.not_null_risk_engine_risk_score.fbe488243b: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "test.enterprise_risk.not_null_risk_engine_risk_score.fbe488243b"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select risk_score
+from "enterprise_risk"."public_gold"."risk_engine"
+where risk_score is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:05:20.339256 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:05:20.342215 [debug] [Thread-4 (]: On test.enterprise_risk.not_null_risk_engine_grade.2913e861f7: ROLLBACK
+[0m14:05:20.342976 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:05:20.345633 [debug] [Thread-3 (]: On test.enterprise_risk.not_null_risk_engine_risk_score.fbe488243b: ROLLBACK
+[0m14:05:20.346303 [debug] [Thread-4 (]: On test.enterprise_risk.not_null_risk_engine_grade.2913e861f7: Close
+[0m14:05:20.347137 [info ] [Thread-4 (]: 9 of 15 PASS not_null_risk_engine_grade ........................................ [[32mPASS[0m in 0.05s]
+[0m14:05:20.348334 [debug] [Thread-4 (]: Finished running node test.enterprise_risk.not_null_risk_engine_grade.2913e861f7
+[0m14:05:20.347502 [debug] [Thread-3 (]: On test.enterprise_risk.not_null_risk_engine_risk_score.fbe488243b: Close
+[0m14:05:20.349445 [info ] [Thread-3 (]: 10 of 15 PASS not_null_risk_engine_risk_score .................................. [[32mPASS[0m in 0.05s]
+[0m14:05:20.351020 [debug] [Thread-3 (]: Finished running node test.enterprise_risk.not_null_risk_engine_risk_score.fbe488243b
+[0m14:05:20.353251 [debug] [Thread-1 (]: Began running node model.enterprise_risk.policy_engine
+[0m14:05:20.353861 [debug] [Thread-2 (]: Began running node model.enterprise_risk.recommendations
+[0m14:05:20.354618 [info ] [Thread-1 (]: 11 of 15 START sql table model public_gold.policy_engine ....................... [RUN]
+[0m14:05:20.356672 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.enterprise_risk.risk_engine, now model.enterprise_risk.policy_engine)
+[0m14:05:20.357256 [debug] [Thread-1 (]: Began compiling node model.enterprise_risk.policy_engine
+[0m14:05:20.362527 [debug] [Thread-1 (]: Writing injected SQL for node "model.enterprise_risk.policy_engine"
+[0m14:05:20.355383 [info ] [Thread-2 (]: 12 of 15 START sql table model public_gold.recommendations ..................... [RUN]
+[0m14:05:20.363510 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.enterprise_risk.portfolio_summary, now model.enterprise_risk.recommendations)
+[0m14:05:20.364155 [debug] [Thread-1 (]: Began executing node model.enterprise_risk.policy_engine
+[0m14:05:20.364548 [debug] [Thread-2 (]: Began compiling node model.enterprise_risk.recommendations
+[0m14:05:20.371483 [debug] [Thread-1 (]: Writing runtime sql for node "model.enterprise_risk.policy_engine"
+[0m14:05:20.376155 [debug] [Thread-2 (]: Writing injected SQL for node "model.enterprise_risk.recommendations"
+[0m14:05:20.376938 [debug] [Thread-2 (]: Began executing node model.enterprise_risk.recommendations
+[0m14:05:20.380557 [debug] [Thread-2 (]: Writing runtime sql for node "model.enterprise_risk.recommendations"
+[0m14:05:20.381188 [debug] [Thread-1 (]: Using postgres connection "model.enterprise_risk.policy_engine"
+[0m14:05:20.381921 [debug] [Thread-2 (]: Using postgres connection "model.enterprise_risk.recommendations"
+[0m14:05:20.383884 [debug] [Thread-2 (]: On model.enterprise_risk.recommendations: BEGIN
+[0m14:05:20.384558 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:05:20.382434 [debug] [Thread-1 (]: On model.enterprise_risk.policy_engine: BEGIN
+[0m14:05:20.385997 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:05:20.398253 [debug] [Thread-2 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:05:20.400272 [debug] [Thread-2 (]: Using postgres connection "model.enterprise_risk.recommendations"
+[0m14:05:20.401415 [debug] [Thread-2 (]: On model.enterprise_risk.recommendations: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "model.enterprise_risk.recommendations"} */
+
+  
+    
+
+  create  table "enterprise_risk"."public_gold"."recommendations__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+WITH risk_flags AS (
+    SELECT 
+        grade,
+        dti_band,
+        default_rate,
+        loan_count,
+        CASE 
+            WHEN default_rate > 0.04 THEN 'High Default Rate'
+            WHEN dti_band LIKE 'High%' AND default_rate > 0.03 THEN 'High DTI & Rising Risk'
+            ELSE 'Normal'
+        END AS risk_trigger
+    FROM "enterprise_risk"."public_gold"."risk_engine"
+)
+SELECT 
+    grade,
+    dti_band,
+    risk_trigger,
+    CASE 
+        WHEN risk_trigger = 'High Default Rate' THEN 'Increase minimum grade requirements or reduce maximum loan sizes.'
+        WHEN risk_trigger = 'High DTI & Rising Risk' THEN 'Reduce approval threshold for High DTI applicants.'
+        ELSE 'Monitor performance.'
+    END AS recommendation,
+    
+    CASE 
+        WHEN risk_trigger != 'Normal' THEN 'High'
+        ELSE 'Low'
+    END AS business_impact
+FROM risk_flags
+WHERE risk_trigger != 'Normal'
+  );
+  
+[0m14:05:20.403549 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:05:20.404150 [debug] [Thread-1 (]: Using postgres connection "model.enterprise_risk.policy_engine"
+[0m14:05:20.404527 [debug] [Thread-1 (]: On model.enterprise_risk.policy_engine: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "model.enterprise_risk.policy_engine"} */
+
+  
+    
+
+  create  table "enterprise_risk"."public_gold"."policy_engine__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+-- This table holds loan-level pre-calculations to make policy simulations instantly fast.
+-- It joins the base loan data with its corresponding risk segment metrics.
+
+SELECT 
+    l.loan_id,
+    l.loan_amount,
+    l.grade,
+    l.debt_to_income,
+    l.dti_band,
+    l.annual_income,
+    l.income_band,
+    l.emp_length,
+    l.loan_purpose,
+    l.default_flag,
+    l.outcome_eligible,
+    r.risk_score,
+    r.expected_loss AS segment_expected_loss
+FROM "enterprise_risk"."public_silver"."loans_clean" l
+LEFT JOIN "enterprise_risk"."public_gold"."risk_engine" r 
+  ON l.grade = r.grade 
+ AND l.loan_purpose = r.loan_purpose
+ AND l.income_band = r.income_band
+ AND l.dti_band = r.dti_band
+  );
+  
+[0m14:05:20.409188 [debug] [Thread-2 (]: SQL status: SELECT 55 in 0.0 seconds
+[0m14:05:20.414772 [debug] [Thread-2 (]: Using postgres connection "model.enterprise_risk.recommendations"
+[0m14:05:20.415758 [debug] [Thread-2 (]: On model.enterprise_risk.recommendations: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "model.enterprise_risk.recommendations"} */
+alter table "enterprise_risk"."public_gold"."recommendations__dbt_tmp" rename to "recommendations"
+[0m14:05:20.419873 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m14:05:20.423516 [debug] [Thread-2 (]: On model.enterprise_risk.recommendations: COMMIT
+[0m14:05:20.424509 [debug] [Thread-2 (]: Using postgres connection "model.enterprise_risk.recommendations"
+[0m14:05:20.425050 [debug] [Thread-2 (]: On model.enterprise_risk.recommendations: COMMIT
+[0m14:05:20.427922 [debug] [Thread-2 (]: SQL status: COMMIT in 0.0 seconds
+[0m14:05:20.432198 [debug] [Thread-2 (]: Applying DROP to: "enterprise_risk"."public_gold"."recommendations__dbt_backup"
+[0m14:05:20.433292 [debug] [Thread-2 (]: Using postgres connection "model.enterprise_risk.recommendations"
+[0m14:05:20.433831 [debug] [Thread-2 (]: On model.enterprise_risk.recommendations: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "model.enterprise_risk.recommendations"} */
+drop table if exists "enterprise_risk"."public_gold"."recommendations__dbt_backup" cascade
+[0m14:05:20.434922 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m14:05:20.437171 [debug] [Thread-2 (]: On model.enterprise_risk.recommendations: Close
+[0m14:05:20.441326 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '52fd2a17-3152-41b5-bbf2-0f5ed0587764', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bf6ddecd310>]}
+[0m14:05:20.442404 [info ] [Thread-2 (]: 12 of 15 OK created sql table model public_gold.recommendations ................ [[32mSELECT 55[0m in 0.08s]
+[0m14:05:20.443911 [debug] [Thread-2 (]: Finished running node model.enterprise_risk.recommendations
+[0m14:05:20.445040 [debug] [Thread-3 (]: Began running node test.enterprise_risk.accepted_values_recommendations_business_impact__High__Low.9d5768a9ba
+[0m14:05:20.445414 [info ] [Thread-3 (]: 13 of 15 START test accepted_values_recommendations_business_impact__High__Low . [RUN]
+[0m14:05:20.445918 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.enterprise_risk.not_null_risk_engine_risk_score.fbe488243b, now test.enterprise_risk.accepted_values_recommendations_business_impact__High__Low.9d5768a9ba)
+[0m14:05:20.446312 [debug] [Thread-3 (]: Began compiling node test.enterprise_risk.accepted_values_recommendations_business_impact__High__Low.9d5768a9ba
+[0m14:05:20.455381 [debug] [Thread-3 (]: Writing injected SQL for node "test.enterprise_risk.accepted_values_recommendations_business_impact__High__Low.9d5768a9ba"
+[0m14:05:20.457176 [debug] [Thread-3 (]: Began executing node test.enterprise_risk.accepted_values_recommendations_business_impact__High__Low.9d5768a9ba
+[0m14:05:20.461879 [debug] [Thread-3 (]: Writing runtime sql for node "test.enterprise_risk.accepted_values_recommendations_business_impact__High__Low.9d5768a9ba"
+[0m14:05:20.462840 [debug] [Thread-3 (]: Using postgres connection "test.enterprise_risk.accepted_values_recommendations_business_impact__High__Low.9d5768a9ba"
+[0m14:05:20.463273 [debug] [Thread-3 (]: On test.enterprise_risk.accepted_values_recommendations_business_impact__High__Low.9d5768a9ba: BEGIN
+[0m14:05:20.463610 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m14:05:20.469907 [debug] [Thread-1 (]: SQL status: SELECT 9976 in 0.0 seconds
+[0m14:05:20.474819 [debug] [Thread-1 (]: Using postgres connection "model.enterprise_risk.policy_engine"
+[0m14:05:20.475716 [debug] [Thread-1 (]: On model.enterprise_risk.policy_engine: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "model.enterprise_risk.policy_engine"} */
+alter table "enterprise_risk"."public_gold"."policy_engine__dbt_tmp" rename to "policy_engine"
+[0m14:05:20.477021 [debug] [Thread-3 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:05:20.477390 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m14:05:20.477752 [debug] [Thread-3 (]: Using postgres connection "test.enterprise_risk.accepted_values_recommendations_business_impact__High__Low.9d5768a9ba"
+[0m14:05:20.479485 [debug] [Thread-1 (]: On model.enterprise_risk.policy_engine: COMMIT
+[0m14:05:20.479915 [debug] [Thread-3 (]: On test.enterprise_risk.accepted_values_recommendations_business_impact__High__Low.9d5768a9ba: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "test.enterprise_risk.accepted_values_recommendations_business_impact__High__Low.9d5768a9ba"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        business_impact as value_field,
+        count(*) as n_records
+
+    from "enterprise_risk"."public_gold"."recommendations"
+    group by business_impact
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'High','Low'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m14:05:20.480273 [debug] [Thread-1 (]: Using postgres connection "model.enterprise_risk.policy_engine"
+[0m14:05:20.480648 [debug] [Thread-1 (]: On model.enterprise_risk.policy_engine: COMMIT
+[0m14:05:20.482296 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:05:20.484724 [debug] [Thread-3 (]: On test.enterprise_risk.accepted_values_recommendations_business_impact__High__Low.9d5768a9ba: ROLLBACK
+[0m14:05:20.485177 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m14:05:20.489265 [debug] [Thread-1 (]: Applying DROP to: "enterprise_risk"."public_gold"."policy_engine__dbt_backup"
+[0m14:05:20.489663 [debug] [Thread-3 (]: On test.enterprise_risk.accepted_values_recommendations_business_impact__High__Low.9d5768a9ba: Close
+[0m14:05:20.491284 [debug] [Thread-1 (]: Using postgres connection "model.enterprise_risk.policy_engine"
+[0m14:05:20.492088 [debug] [Thread-1 (]: On model.enterprise_risk.policy_engine: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "model.enterprise_risk.policy_engine"} */
+drop table if exists "enterprise_risk"."public_gold"."policy_engine__dbt_backup" cascade
+[0m14:05:20.493499 [info ] [Thread-3 (]: 13 of 15 PASS accepted_values_recommendations_business_impact__High__Low ....... [[32mPASS[0m in 0.05s]
+[0m14:05:20.494560 [debug] [Thread-3 (]: Finished running node test.enterprise_risk.accepted_values_recommendations_business_impact__High__Low.9d5768a9ba
+[0m14:05:20.495241 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m14:05:20.499036 [debug] [Thread-1 (]: On model.enterprise_risk.policy_engine: Close
+[0m14:05:20.501017 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '52fd2a17-3152-41b5-bbf2-0f5ed0587764', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bf6db14b610>]}
+[0m14:05:20.502095 [info ] [Thread-1 (]: 11 of 15 OK created sql table model public_gold.policy_engine .................. [[32mSELECT 9976[0m in 0.14s]
+[0m14:05:20.503100 [debug] [Thread-1 (]: Finished running node model.enterprise_risk.policy_engine
+[0m14:05:20.504693 [debug] [Thread-2 (]: Began running node test.enterprise_risk.not_null_policy_engine_loan_id.eede6f2191
+[0m14:05:20.505395 [info ] [Thread-2 (]: 14 of 15 START test not_null_policy_engine_loan_id ............................. [RUN]
+[0m14:05:20.506141 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.enterprise_risk.recommendations, now test.enterprise_risk.not_null_policy_engine_loan_id.eede6f2191)
+[0m14:05:20.506664 [debug] [Thread-2 (]: Began compiling node test.enterprise_risk.not_null_policy_engine_loan_id.eede6f2191
+[0m14:05:20.507250 [debug] [Thread-4 (]: Began running node test.enterprise_risk.unique_policy_engine_loan_id.2521d6c7df
+[0m14:05:20.514233 [debug] [Thread-2 (]: Writing injected SQL for node "test.enterprise_risk.not_null_policy_engine_loan_id.eede6f2191"
+[0m14:05:20.514947 [info ] [Thread-4 (]: 15 of 15 START test unique_policy_engine_loan_id ............................... [RUN]
+[0m14:05:20.515734 [debug] [Thread-2 (]: Began executing node test.enterprise_risk.not_null_policy_engine_loan_id.eede6f2191
+[0m14:05:20.516395 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.enterprise_risk.not_null_risk_engine_grade.2913e861f7, now test.enterprise_risk.unique_policy_engine_loan_id.2521d6c7df)
+[0m14:05:20.520240 [debug] [Thread-4 (]: Began compiling node test.enterprise_risk.unique_policy_engine_loan_id.2521d6c7df
+[0m14:05:20.519562 [debug] [Thread-2 (]: Writing runtime sql for node "test.enterprise_risk.not_null_policy_engine_loan_id.eede6f2191"
+[0m14:05:20.528724 [debug] [Thread-4 (]: Writing injected SQL for node "test.enterprise_risk.unique_policy_engine_loan_id.2521d6c7df"
+[0m14:05:20.529566 [debug] [Thread-2 (]: Using postgres connection "test.enterprise_risk.not_null_policy_engine_loan_id.eede6f2191"
+[0m14:05:20.529980 [debug] [Thread-2 (]: On test.enterprise_risk.not_null_policy_engine_loan_id.eede6f2191: BEGIN
+[0m14:05:20.530348 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:05:20.530664 [debug] [Thread-4 (]: Began executing node test.enterprise_risk.unique_policy_engine_loan_id.2521d6c7df
+[0m14:05:20.533949 [debug] [Thread-4 (]: Writing runtime sql for node "test.enterprise_risk.unique_policy_engine_loan_id.2521d6c7df"
+[0m14:05:20.535045 [debug] [Thread-4 (]: Using postgres connection "test.enterprise_risk.unique_policy_engine_loan_id.2521d6c7df"
+[0m14:05:20.535763 [debug] [Thread-4 (]: On test.enterprise_risk.unique_policy_engine_loan_id.2521d6c7df: BEGIN
+[0m14:05:20.536304 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m14:05:20.541630 [debug] [Thread-2 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:05:20.542374 [debug] [Thread-2 (]: Using postgres connection "test.enterprise_risk.not_null_policy_engine_loan_id.eede6f2191"
+[0m14:05:20.542894 [debug] [Thread-2 (]: On test.enterprise_risk.not_null_policy_engine_loan_id.eede6f2191: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "test.enterprise_risk.not_null_policy_engine_loan_id.eede6f2191"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select loan_id
+from "enterprise_risk"."public_gold"."policy_engine"
+where loan_id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m14:05:20.546003 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:05:20.548450 [debug] [Thread-2 (]: On test.enterprise_risk.not_null_policy_engine_loan_id.eede6f2191: ROLLBACK
+[0m14:05:20.549023 [debug] [Thread-4 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:05:20.549731 [debug] [Thread-4 (]: Using postgres connection "test.enterprise_risk.unique_policy_engine_loan_id.2521d6c7df"
+[0m14:05:20.550336 [debug] [Thread-4 (]: On test.enterprise_risk.unique_policy_engine_loan_id.2521d6c7df: /* {"app": "dbt", "dbt_version": "1.8.3", "profile_name": "enterprise_risk", "target_name": "dev", "node_id": "test.enterprise_risk.unique_policy_engine_loan_id.2521d6c7df"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    loan_id as unique_field,
+    count(*) as n_records
+
+from "enterprise_risk"."public_gold"."policy_engine"
+where loan_id is not null
+group by loan_id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m14:05:20.551069 [debug] [Thread-2 (]: On test.enterprise_risk.not_null_policy_engine_loan_id.eede6f2191: Close
+[0m14:05:20.552142 [info ] [Thread-2 (]: 14 of 15 PASS not_null_policy_engine_loan_id ................................... [[32mPASS[0m in 0.05s]
+[0m14:05:20.553054 [debug] [Thread-2 (]: Finished running node test.enterprise_risk.not_null_policy_engine_loan_id.eede6f2191
+[0m14:05:20.561144 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.0 seconds
+[0m14:05:20.563229 [debug] [Thread-4 (]: On test.enterprise_risk.unique_policy_engine_loan_id.2521d6c7df: ROLLBACK
+[0m14:05:20.564341 [debug] [Thread-4 (]: On test.enterprise_risk.unique_policy_engine_loan_id.2521d6c7df: Close
+[0m14:05:20.565299 [info ] [Thread-4 (]: 15 of 15 PASS unique_policy_engine_loan_id ..................................... [[32mPASS[0m in 0.05s]
+[0m14:05:20.566198 [debug] [Thread-4 (]: Finished running node test.enterprise_risk.unique_policy_engine_loan_id.2521d6c7df
+[0m14:05:20.569253 [debug] [MainThread]: Using postgres connection "master"
+[0m14:05:20.569942 [debug] [MainThread]: On master: BEGIN
+[0m14:05:20.570388 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:05:20.578164 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m14:05:20.578599 [debug] [MainThread]: On master: COMMIT
+[0m14:05:20.578912 [debug] [MainThread]: Using postgres connection "master"
+[0m14:05:20.579182 [debug] [MainThread]: On master: COMMIT
+[0m14:05:20.579645 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m14:05:20.579973 [debug] [MainThread]: On master: Close
+[0m14:05:20.580458 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:05:20.580815 [debug] [MainThread]: Connection 'model.enterprise_risk.policy_engine' was properly closed.
+[0m14:05:20.581113 [debug] [MainThread]: Connection 'test.enterprise_risk.not_null_policy_engine_loan_id.eede6f2191' was properly closed.
+[0m14:05:20.581385 [debug] [MainThread]: Connection 'test.enterprise_risk.unique_policy_engine_loan_id.2521d6c7df' was properly closed.
+[0m14:05:20.581649 [debug] [MainThread]: Connection 'test.enterprise_risk.accepted_values_recommendations_business_impact__High__Low.9d5768a9ba' was properly closed.
+[0m14:05:20.582113 [info ] [MainThread]: 
+[0m14:05:20.582483 [info ] [MainThread]: Finished running 1 view model, 10 data tests, 4 table models in 0 hours 0 minutes and 1.00 seconds (1.00s).
+[0m14:05:20.587363 [debug] [MainThread]: Command end result
+[0m14:05:20.618300 [info ] [MainThread]: 
+[0m14:05:20.618881 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:05:20.619364 [info ] [MainThread]: 
+[0m14:05:20.619821 [info ] [MainThread]: Done. PASS=15 WARN=0 ERROR=0 SKIP=0 TOTAL=15
+[0m14:05:20.621021 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 1.977909, "process_user_time": 3.202315, "process_kernel_time": 0.210494, "process_mem_max_rss": "122388", "process_in_blocks": "5680", "process_out_blocks": "4304"}
+[0m14:05:20.621573 [debug] [MainThread]: Command `dbt build` succeeded at 14:05:20.621446 after 1.98 seconds
+[0m14:05:20.621942 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bf6dccf4a90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bf6e082c690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bf6da7bdd10>]}
+[0m14:05:20.622382 [debug] [MainThread]: Flushing usage events

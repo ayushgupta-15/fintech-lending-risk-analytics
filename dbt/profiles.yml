@@ -1,0 +1,12 @@
+enterprise_risk:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: admin
+      password: adminpassword
+      port: 5433
+      dbname: enterprise_risk
+      schema: public
+      threads: 4
