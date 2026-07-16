@@ -4,18 +4,38 @@ import { useQuery } from '@tanstack/react-query'
 import { api } from '@/lib/api'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Activity, AlertTriangle, CheckCircle2, DollarSign } from 'lucide-react'
+import { Bar, BarChart, ResponsiveContainer, XAxis, YAxis, Tooltip, Area, AreaChart } from 'recharts'
 
 export default function Dashboard() {
-  const { data, isLoading, error } = useQuery({
+  const { data: summary, isLoading: loadingSummary } = useQuery({
     queryKey: ['portfolioSummary'],
     queryFn: api.getPortfolioSummary
   })
 
-  if (isLoading) return <div className="p-8 text-slate-400">Loading dashboard data...</div>
-  if (error) return <div className="p-8 text-red-400">Failed to load dashboard data.</div>
+  const { data: grades } = useQuery({
+    queryKey: ['riskGrades'],
+    queryFn: api.getRiskGrades
+  })
+
+  const { data: dti } = useQuery({
+    queryKey: ['riskDti'],
+    queryFn: api.getRiskDti
+  })
+
+  if (loadingSummary) return <div className="p-8 text-slate-400">Loading dashboard data...</div>
 
   const formatCurrency = (val: number) => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 1, notation: 'compact' }).format(val)
   const formatPercent = (val: number) => new Intl.NumberFormat('en-US', { style: 'percent', maximumFractionDigits: 2 }).format(val)
+
+  // Mock trend data since we don't have time series in the warehouse yet
+  const trendData = [
+    { month: 'Jan', volume: 1200000 },
+    { month: 'Feb', volume: 1800000 },
+    { month: 'Mar', volume: 1500000 },
+    { month: 'Apr', volume: 2200000 },
+    { month: 'May', volume: 2800000 },
+    { month: 'Jun', volume: 3100000 },
+  ]
 
   return (
     <div className="space-y-8 pb-12">
@@ -31,7 +51,7 @@ export default function Dashboard() {
             <DollarSign className="h-4 w-4 text-slate-500" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-white">{formatCurrency(data?.total_funded_amount || 0)}</div>
+            <div className="text-2xl font-bold text-white">{formatCurrency(summary?.total_funded_amount || 0)}</div>
             <p className="text-xs text-emerald-400 mt-1 flex items-center">
               ▲ 2.3% <span className="text-slate-500 ml-2">from last month</span>
             </p>
@@ -44,7 +64,7 @@ export default function Dashboard() {
             <AlertTriangle className="h-4 w-4 text-slate-500" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-white">{formatCurrency((data?.total_funded_amount || 0) * (data?.avg_default_rate || 0))}</div>
+            <div className="text-2xl font-bold text-white">{formatCurrency(summary?.expected_loss || 0)}</div>
             <p className="text-xs text-emerald-400 mt-1 flex items-center">
               ▼ 5.0% <span className="text-slate-500 ml-2">from last month</span>
             </p>
@@ -57,7 +77,7 @@ export default function Dashboard() {
             <Activity className="h-4 w-4 text-slate-500" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-white">{formatPercent(data?.avg_default_rate || 0)}</div>
+            <div className="text-2xl font-bold text-white">{formatPercent(summary?.default_rate || 0)}</div>
             <p className="text-xs text-emerald-400 mt-1 flex items-center">
               ▼ 0.18% <span className="text-slate-500 ml-2">from last month</span>
             </p>
@@ -70,7 +90,7 @@ export default function Dashboard() {
             <CheckCircle2 className="h-4 w-4 text-slate-500" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold text-white">{new Intl.NumberFormat().format(data?.total_loans || 0)}</div>
+            <div className="text-2xl font-bold text-white">{new Intl.NumberFormat().format(summary?.total_loans || 0)}</div>
             <p className="text-xs text-emerald-400 mt-1 flex items-center">
               ▲ 1.2% <span className="text-slate-500 ml-2">from last month</span>
             </p>
@@ -78,22 +98,46 @@ export default function Dashboard() {
         </Card>
       </div>
       
-      {/* Placeholder for charts */}
       <div className="grid gap-6 md:grid-cols-2">
         <Card className="col-span-1 h-96 flex flex-col">
           <CardHeader>
             <CardTitle>Monthly Origination Trends</CardTitle>
           </CardHeader>
-          <CardContent className="flex-1 flex items-center justify-center text-slate-500 border-t border-slate-800/50 mt-4">
-            [ Line Chart: Time vs Volume ]
+          <CardContent className="flex-1 mt-4">
+            <ResponsiveContainer width="100%" height="100%">
+              <AreaChart data={trendData}>
+                <defs>
+                  <linearGradient id="colorVolume" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="5%" stopColor="#3b82f6" stopOpacity={0.3}/>
+                    <stop offset="95%" stopColor="#3b82f6" stopOpacity={0}/>
+                  </linearGradient>
+                </defs>
+                <XAxis dataKey="month" stroke="#64748b" fontSize={12} tickLine={false} axisLine={false} />
+                <YAxis stroke="#64748b" fontSize={12} tickLine={false} axisLine={false} tickFormatter={(value) => `$${value / 1000000}M`} />
+                <Tooltip contentStyle={{ backgroundColor: '#1e293b', border: 'none', borderRadius: '8px', color: '#f8fafc' }} />
+                <Area type="monotone" dataKey="volume" stroke="#3b82f6" fillOpacity={1} fill="url(#colorVolume)" />
+              </AreaChart>
+            </ResponsiveContainer>
           </CardContent>
         </Card>
+
         <Card className="col-span-1 h-96 flex flex-col">
           <CardHeader>
-            <CardTitle>Risk Distribution Summary</CardTitle>
+            <CardTitle>Risk Distribution by Grade</CardTitle>
           </CardHeader>
-          <CardContent className="flex-1 flex items-center justify-center text-slate-500 border-t border-slate-800/50 mt-4">
-            [ Bar Chart: Grade vs Default Probability ]
+          <CardContent className="flex-1 mt-4">
+            {grades ? (
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart data={grades} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+                  <XAxis dataKey="grade" stroke="#64748b" fontSize={12} tickLine={false} axisLine={false} />
+                  <YAxis stroke="#64748b" fontSize={12} tickLine={false} axisLine={false} tickFormatter={(value) => `${value / 1000}k`} />
+                  <Tooltip cursor={{ fill: '#334155' }} contentStyle={{ backgroundColor: '#1e293b', border: 'none', borderRadius: '8px', color: '#f8fafc' }} />
+                  <Bar dataKey="loan_count" fill="#8b5cf6" radius={[4, 4, 0, 0]} />
+                </BarChart>
+              </ResponsiveContainer>
+            ) : (
+              <div className="h-full flex items-center justify-center text-slate-500">Loading chart...</div>
+            )}
           </CardContent>
         </Card>
       </div>
